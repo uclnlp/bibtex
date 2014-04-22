@@ -8,6 +8,35 @@
 
 \DeclareMathOperator*{\argmax}{arg\,max}
 
+%%% Aliases
+\let\op\operatorname
+\let\mb\mathbf
+\let\mc\mathcal
+
+
+
+
+%%% Joint Extraction Paper
+\newcommand{\F}{$\text{F}_1$ measure }
+\newcommand{\f}{$\text{F}_1$ }
+\newcommand{\ra}{$\rightarrow$}
+\newcommand{\cprob}[2]{P(#1\;|\;#2)}
+\newcommand{\cprobf}[2]{P(\mathbf{#1}\;|\;\mathbf{#2})}
+\newcommand{\rv}[1]{$\bf #1$}
+\newcommand{\rvt}[1]{$\mt{#1}$}
+\newcommand{\rvf}[1]{$\mf{#1}$}
+\newcommand{\mrvt}[1]{\mb{#1}^{[1]}}
+\newcommand{\mrvf}[1]{\mb{#1}^{[0]}}
+\let\mt\mrvt
+\let\mf\mrvf
+\newcommand{\cif}[3]{P(\mathbf{#1}\perp\mathbf{#2}\;|\;\mathbf{#3})}
+\newcommand{\fproduct}[4]{$\Phi($#1$,$#2$)*\Phi($#2$,$#3$)*\Phi($#3$,$#4$)*\Phi($#4$,$#1$)$}
+\newcommand{\fprod}[4]{#1 #2 #3 #4}
+\newcommand{\vb}[1]{\verb~#1~}
+
+
+
+
 %%% Tensorland
 \renewcommand\vec[1]{\textbf{#1}}
 \newcommand{\mat}[1]{\textbf{#1}}
