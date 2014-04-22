@@ -1,0 +1,13 @@
+\newboolean{draftmode}
+\setboolean{draftmode}{true} %rockt: careful with this! for the final version you still shouldn't have any todo commands left in the document
+\ifthenelse{\boolean{draftmode}}{
+  \newcommand{\todo}{\textcolor{todo}{\textbf{TODO}}}
+  \newcommand{\todoc}[1]{\textcolor{todo}{\textbf{TODO} #1}}
+  \newcommand{\toref}{\textcolor{todoref}{\textbf{REF}}}
+  \newcommand{\torefc}[1]{\textcolor{todoref}{\textbf{REF} #1}}
+}{
+  \newcommand{\todo}{}
+  \newcommand{\todoc}[1]{}
+  \newcommand{\toref}{}
+  \newcommand{\torefc}[1]{}
+}
