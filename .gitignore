@@ -1,0 +1,27 @@
+#OSX junk
+*.DS_Store
+
+#lyx junk
+*.lyx~
+
+#latex junk
+*.aux
+*.log
+*.out
+*.toc
+*.blg
+*.bcf
+*.bst
+*.dvi
+*.pdf
+*.fdb_latexmk
+*.fls
+*.nav
+
+#emacs junk
+*.el
+*.snm
+_region_.tex
+
+#UNIX junk:
+~
