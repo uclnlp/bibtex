@@ -1,0 +1,168 @@
+
+  
+%%% \usecolortheme{whale}
+% \setbeamercolor*{palette primary}{use=structure,fg=white,bg=structure.fg}
+% \setbeamercolor*{palette secondary}{use=structure,fg=white,bg=structure.fg!75!black}
+% \setbeamercolor*{palette tertiary}{use=structure,fg=white,bg=structure.fg!50!black}
+% \setbeamercolor*{palette quaternary}{fg=white,bg=black}
+\setbeamercolor*{palette primary}{use=structure,fg=black,bg=white}
+\setbeamercolor*{palette secondary}{use=structure,fg=black,bg=white}
+\setbeamercolor*{palette tertiary}{use=structure,fg=black,bg=white}
+\setbeamercolor*{palette quaternary}{fg=black,bg=white}
+
+\setbeamercolor*{sidebar}{use=structure,bg=structure.fg}
+  
+\setbeamercolor*{palette sidebar primary}{use=structure,fg=structure.fg!10}
+\setbeamercolor*{palette sidebar secondary}{fg=white}
+\setbeamercolor*{palette sidebar tertiary}{use=structure,fg=structure.fg!50}
+\setbeamercolor*{palette sidebar quaternary}{fg=white}
+
+\setbeamercolor*{titlelike}{parent=palette primary}
+
+\setbeamercolor*{separation line}{}
+\setbeamercolor*{fine separation line}{}
+
+
+
+%%% \usecolortheme{orchid}
+\setbeamercolor{block title}{use=structure,fg=white,bg=structure.fg!75!black}
+\setbeamercolor{block title alerted}{use=alerted text,fg=white,bg=alerted text.fg!75!black}
+\setbeamercolor{block title example}{use=example text,fg=white,bg=example text.fg!75!black}
+
+\setbeamercolor{block body}{parent=normal text,use=block title,bg=block title.bg!10!bg}
+\setbeamercolor{block body alerted}{parent=normal text,use=block title alerted,bg=block title alerted.bg!10!bg}
+\setbeamercolor{block body example}{parent=normal text,use=block title example,bg=block title example.bg!10!bg}
+
+
+
+
+
+
+\useinnertheme[shadow=true]{rounded}
+
+\setbeamerfont{block title}{size={}}
+
+\setbeamercolor*{block body}{}
+\setbeamercolor*{block body alerted}{}
+\setbeamercolor*{block body example}{}
+\setbeamercolor*{block title}{parent=structure}
+\setbeamercolor*{block title alerted}{parent=alerted text}
+\setbeamercolor*{block title example}{parent=example text}
+
+\setbeamercolor*{titlelike}{parent=structure}
+
+%\useoutertheme[]{smoothbars}
+\useinnertheme{rectangles}
+
+
+
+
+\newif\ifbeamer@sb@subsection
+
+\DeclareOptionBeamer{subsection}[true]{\csname beamer@sb@subsection#1\endcsname}
+\ExecuteOptionsBeamer{subsection=true}
+\ProcessOptionsBeamer
+
+
+
+%\mode<presentation>
+
+\setbeamercolor{frametitle}{parent=palette primary}
+\setbeamercolor{subsection in head/foot}{parent=palette secondary}
+\setbeamercolor{section in head/foot}{parent=palette quaternary}
+
+
+\beamer@compresstrue
+
+\AtBeginDocument{
+  {
+    \usebeamerfont*{headline}
+    \colorlet{global.bg}{bg}
+    \usebeamercolor{subsection in head/foot}
+    \usebeamercolor{section in head/foot}
+    \usebeamercolor{frametitle}
+
+    \ifbeamer@sb@subsection
+      \pgfdeclareverticalshading{beamer@barshade}{\the\paperwidth}{%
+         color(0ex)=(global.bg);%
+         color(1ex)=(subsection in head/foot.bg);%
+         color(3.25ex)=(subsection in head/foot.bg);%
+         color(4.25ex)=(section in head/foot.bg);%
+         color(9.75ex)=(section in head/foot.bg)%
+       }
+       \pgfdeclareverticalshading{beamer@aboveframetitle}{\the\paperwidth}{%
+         color(0ex)=(frametitle.bg);%
+         color(1ex)=(frametitle.bg);%
+         color(2ex)=(subsection in head/foot.bg)
+       }
+    \else
+      \pgfdeclareverticalshading{beamer@barshade}{\the\paperwidth}{%
+         color(0ex)=(global.bg);%
+         color(1ex)=(section in head/foot.bg);%
+         color(7ex)=(section in head/foot.bg)%
+       }
+     \pgfdeclareverticalshading{beamer@aboveframetitle}{\the\paperwidth}{%
+         color(0ex)=(frametitle.bg);%
+         color(1ex)=(frametitle.bg);%
+         color(2ex)=(section in head/foot.bg)
+       }
+    \fi  
+
+    \pgfdeclareverticalshading{beamer@belowframetitle}{\the\paperwidth}{%
+      color(0ex)=(global.bg);%
+      color(1ex)=(frametitle.bg)
+    }
+  }
+}
+
+                                % Head
+\defbeamertemplate*{headline}{smoothbars theme}
+{%
+%  \pgfuseshading{beamer@barshade}%
+%  \ifbeamer@sb@subsection%
+%    \vskip-9.75ex%
+%  \else%
+%    \vskip-7ex%
+%  \fi%
+%  \begin{beamercolorbox}[ignorebg,ht=2.25ex,dp=3.75ex]{section in head/foot}
+%    %\insertnavigation{\paperwidth}
+%    \insertnavigation{0.9\paperwidth}
+%  \end{beamercolorbox}%
+%  %\hrule
+%  \ifbeamer@sb@subsection%
+%    \begin{beamercolorbox}[ignorebg,ht=2.125ex,dp=1.125ex,%
+%      leftskip=.3cm,rightskip=.3cm plus1fil]{subsection in head/foot}
+%      %\usebeamerfont{subsection in head/foot}\insertsubsectionhead
+%      \structure{\usebeamerfont{subsection in head/foot}\insertsubsectionhead}
+%    \end{beamercolorbox}%
+%    \structure{\hrule height 1pt}
+%  \fi%
+}%
+
+
+\defbeamertemplate*{frametitle}{smoothbars theme}
+{%
+  \nointerlineskip%
+  \usebeamerfont{headline}%
+  %\begin{beamercolorbox}[wd=\paperwidth,ht=1.5ex,dp=0ex,vmode]{empty}
+  \begin{beamercolorbox}[wd=\paperwidth,ht=2ex,dp=0ex,vmode]{empty}
+  \structure{\hrule height 1pt}
+    \pgfuseshading{beamer@aboveframetitle}%
+  \end{beamercolorbox}%
+  \vskip2.5ex%
+  \nointerlineskip%
+  \begin{beamercolorbox}[wd=\paperwidth,leftskip=.3cm,rightskip=.3cm plus1fil,vmode]{frametitle}
+    \usebeamerfont*{frametitle}\insertframetitle%
+      \ifx\insertframesubtitle\@empty%
+        \strut\par%
+      \else
+        \par{\usebeamerfont*{framesubtitle}{\usebeamercolor[fg]{framesubtitle}\insertframesubtitle}\strut\par}%
+      \fi%%
+    \usebeamerfont{headline}%
+    \vskip.5ex  
+  \end{beamercolorbox}%
+  \nointerlineskip
+  \begin{beamercolorbox}[wd=\paperwidth,ht=.5ex,dp=0ex]{empty}
+    \pgfuseshading{beamer@belowframetitle}%
+  \end{beamercolorbox}%
+}
