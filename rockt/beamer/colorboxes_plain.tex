@@ -1,0 +1,49 @@
+% These options will be applied to all `tcolorboxes`
+\tcbset{%
+	boxsep=-.1mm, left=1mm, right=1mm, top=1mm, bottom=1mm, 
+	%enlarge left by=-.9em, 
+	%width=1.06\textwidth, 
+	noparskip,     
+    colframe=black!50, %color of frame and title background
+    %coltext=black, %color of body text
+    %coltitle=black, %color of title text 
+    %fonttitle=\bfseries,
+    bottomtitle=.5mm,    
+    boxrule=1pt,    
+    arc=3pt,
+    colback=white %background color of the box
+}
+
+\newenvironment{changemargin}[2]{% 
+\begin{list}{}{%
+\setlength{\topsep}{0pt}%
+\setlength{\leftmargin}{#1}%
+\setlength{\rightmargin}{#2}%
+\setlength{\listparindent}{\parindent}%
+\setlength{\itemindent}{\parindent}%
+\setlength{\parsep}{\parskip}%
+}%
+\item[]}{\end{list}}
+
+%\newtcolorbox{normalbox}[1]{#1}
+
+\newtcolorbox{plain}[1]{
+	boxsep=0mm, 
+        left=1mm, 
+        right=1mm, 
+        top=1mm, 
+        bottom=1mm, 
+	%enlarge left by=-1mm, 
+	%width=1.06\textwidth, 
+        %noparskip,     
+        colframe=black!0, %color of frame and title background
+        coltext=black, %color of body text
+        coltitle=black, %color of title text 
+        fonttitle=\bfseries,
+        %bottomtitle=.5mm,    
+        boxrule=1pt,    
+        % arc=3pt,
+        colback=black!0, %background color of the box
+        #1
+}
+
