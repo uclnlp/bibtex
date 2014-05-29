@@ -1,0 +1,275 @@
+% These options will be applied to all `tcolorboxes`
+\tcbset{%
+	boxsep=-.1mm, left=1mm, right=1mm, top=1mm, bottom=1mm, 
+	%enlarge left by=-.9em, 
+	%width=1.06\textwidth, 
+	noparskip,     
+    colframe=black!50, %color of frame and title background
+    %coltext=black, %color of body text
+    %coltitle=black, %color of title text 
+    %fonttitle=\bfseries,
+    bottomtitle=.5mm,    
+    boxrule=1pt,    
+    arc=3pt,
+    colback=white %background color of the box
+}
+
+\newenvironment{changemargin}[2]{% 
+\begin{list}{}{%
+\setlength{\topsep}{0pt}%
+\setlength{\leftmargin}{#1}%
+\setlength{\rightmargin}{#2}%
+\setlength{\listparindent}{\parindent}%
+\setlength{\itemindent}{\parindent}%
+\setlength{\parsep}{\parskip}%
+}%
+\item[]}{\end{list}}
+
+\newtcolorbox{normalbox}[1]{#1}
+
+\newtcolorbox{greenbox}[1]{colback=green!5,colframe=green!50!black,#1}
+\newtcolorbox{redbox}[1]{colback=red!5,colframe=red!80!black,#1}
+
+\newtcolorbox{yellowbox}[1]{colback=yellow!5,colframe=yellow!80!black,#1}
+\newtcolorbox{orangebox}[1]{colback=orange!5,colframe=orange!80!black,#1}
+\newtcolorbox{bluebox}[1]{colback=blue!5,colframe=blue!30!black,#1}
+
+\colorlet{black-base}{black}
+\colorlet{black-background}{black-base!0}
+\colorlet{black-left}{black-base!80}
+\colorlet{black-right}{black-base!50}
+\colorlet{black-subtle}{black-base!70}
+\colorlet{black-left-subtle}{black-base!20}
+\colorlet{black-right-subtle}{black-base!5}
+\newtcolorbox{black-box}[1]{colback=black-background,colframe=black-base,#1}
+\newtcolorbox{black-box-fancy}[1]{
+	enhanced,
+	colback=black-background,
+	title style={left color=black-left, right color=black-right},
+	frame style={drop shadow},
+	colframe=black-base,  
+	#1
+}
+
+\newtcolorbox{black-box-subtle}[1]{
+	enhanced,
+	colback=black-background,
+	title style={left color=black-left-subtle, right color=black-right-subtle},	
+	colframe=black-subtle,
+	coltitle=black-base,  
+	#1
+}
+\newtcolorbox{black-box-line}[1]{
+	freelance,
+	colback=black-background!0,
+	colframe=black-subtle!0,
+	segmentation code={
+ 		\path[draw, dashed, color=black-base!80]
+		(segmentation.west) -- (segmentation.east);},
+	coltitle=black-base,
+	title code={
+		\path[draw, color=black-base!20, line width=1.5pt]
+		($(title.south west) + (0,.05)$) -- ($(title.south east) + (0,.05)$);		
+		\path[draw, color=black-base!80, line width=1.5pt]
+		(title.south west) -- (title.south east);
+		},	 
+	#1 
+}  
+
+\colorlet{structure-base}{structure!60!black}
+\colorlet{structure-background}{structure-base!0}
+\colorlet{structure-left}{structure-base!80}
+\colorlet{structure-right}{structure-base!50}
+\colorlet{structure-subtle}{structure-base!70}
+\colorlet{structure-left-subtle}{structure-base!20}
+\colorlet{structure-right-subtle}{structure-base!5}
+\newtcolorbox{structure-box}[1]{colback=structure-background,colframe=structure-base,#1}
+\newtcolorbox{structure-box-fancy}[1]{
+	enhanced,
+	colback=structure-background,
+	title style={left color=structure-left, right
+	color=structure-right}, 
+	frame style={drop shadow},
+	colframe=structure-base, 
+	#1
+}
+\newtcolorbox{structure-box-subtle}[1]{
+	enhanced,
+	colback=structure-background,
+	title style={left color=structure-left-subtle, right
+	color=structure-right-subtle}, 
+	colframe=structure-subtle,
+	coltitle=black-base, 
+	#1
+}
+\newtcolorbox{structure-box-line}[1]{
+	freelance,
+	colback=structure-background!0,
+	colframe=structure-subtle!0,
+	segmentation code={
+ 		\path[draw, dashed, color=structure-base!80]
+		(segmentation.west) -- (segmentation.east);},
+	coltitle=black-base,
+	title code={
+		\path[draw, color=structure-base!20, line width=1.5pt]
+		($(title.south west) + (0,.05)$) -- ($(title.south east) + (0,.05)$);		
+		\path[draw, color=structure-base!80, line width=1.5pt]
+		(title.south west) -- (title.south east);},	 
+	#1 
+}  
+
+
+\colorlet{red-base}{red!70!black}
+\colorlet{red-background}{red-base!0}
+\colorlet{red-left}{red-base!80}
+\colorlet{red-right}{red-base!50}
+\colorlet{red-subtle}{red-base!70}
+\colorlet{red-left-subtle}{red-base!20}
+\colorlet{red-right-subtle}{red-base!5}
+\newtcolorbox{red-box}[1]{colback=red-background,colframe=red-base,#1}
+\newtcolorbox{red-box-fancy}[1]{
+	enhanced,
+	colback=red-background,
+	title style={left color=red-left, right color=red-right},
+	frame style={drop shadow},
+	colframe=red-base, 
+	#1
+}
+\newtcolorbox{red-box-subtle}[1]{
+	enhanced,
+	colback=red-background,
+	title style={left color=red-left-subtle, right color=red-right-subtle},
+	colframe=red-subtle,
+	coltitle=black-base, 
+	#1
+}  
+\newtcolorbox{red-box-line}[1]{
+	freelance,
+	colback=red-background!0,
+	colframe=red-subtle!0,
+	segmentation code={
+ 		\path[draw, dashed, color=red-base!80]
+		(segmentation.west) -- (segmentation.east);},
+	coltitle=black-base,
+	title code={
+		\path[draw, color=red-base!20, line width=1.5pt]
+		($(title.south west) + (0,.05)$) -- ($(title.south east) + (0,.05)$);		
+		\path[draw, color=red-base!80, line width=1.5pt]
+		(title.south west) -- (title.south east);},	 
+	#1 
+}  
+
+\colorlet{green-base}{green!40!black}
+\colorlet{green-background}{green-base!0}
+\colorlet{green-left}{green-base!80}
+\colorlet{green-right}{green-base!50}
+\colorlet{green-subtle}{green-base!70}
+\colorlet{green-left-subtle}{green-base!20}
+\colorlet{green-right-subtle}{green-base!5}
+\newtcolorbox{green-box}[1]{colback=green-background,colframe=green-base,#1}
+\newtcolorbox{green-box-fancy}[1]{
+	enhanced,
+	colback=green-background,
+	title style={left color=green-left, right color=green-right},
+	frame style={drop shadow},
+	colframe=green-base, 
+	#1
+}
+\newtcolorbox{green-box-subtle}[1]{
+	enhanced,
+	colback=green-background,
+	title style={left color=green-left-subtle, right color=green-right-subtle},
+	colframe=green-subtle,
+	coltitle=black-base, 
+	#1 
+}  
+\newtcolorbox{green-box-line}[1]{
+	freelance,
+	colback=green-background!0,
+	colframe=green-subtle!0,
+	segmentation code={
+ 		\path[draw, dashed, color=green-base!80]
+		(segmentation.west) -- (segmentation.east);},
+	coltitle=black-base,
+	title code={
+		\path[draw, color=green-base!20, line width=1.5pt]
+		($(title.south west) + (0,.05)$) -- ($(title.south east) + (0,.05)$);			
+		\path[draw, color=green-base!80, line width=1.5pt]
+		(title.south west) -- (title.south east);},	 
+	#1 
+}  
+
+\colorlet{blue-base}{blue!40!black}
+\colorlet{blue-background}{blue-base!0}
+\colorlet{blue-left}{blue-base!80}
+\colorlet{blue-right}{blue-base!50}
+\colorlet{blue-subtle}{blue-base!70}
+\colorlet{blue-left-subtle}{blue-base!20}
+\colorlet{blue-right-subtle}{blue-base!5}
+\newtcolorbox{blue-box}[1]{colback=blue-background,colframe=blue-base,#1}
+\newtcolorbox{blue-box-fancy}[1]{
+	enhanced,
+	colback=blue-background,
+	title style={left color=blue-left, right color=blue-right},
+	frame style={drop shadow},
+	colframe=blue-base, 
+	#1
+}
+\newtcolorbox{blue-box-subtle}[1]{
+	enhanced,
+	colback=blue-background,
+	title style={left color=blue-left-subtle, right color=blue-right-subtle},
+	colframe=blue-subtle,
+	coltitle=black-base, 
+	#1 
+}  
+\newtcolorbox{blue-box-line}[1]{
+	freelance,
+	colback=blue-background!0,
+	colframe=blue-subtle!0,
+	segmentation code={
+ 		\path[draw, dashed, color=blue-base!80]
+		(segmentation.west) -- (segmentation.east);},
+	coltitle=black-base,
+	title code={
+		\path[draw, color=blue-base!20, line width=1.5pt]
+		($(title.south west) + (0,.05)$) -- ($(title.south east) + (0,.05)$);			
+		\path[draw, color=blue-base!80, line width=1.5pt]
+		(title.south west) -- (title.south east);},	 
+	#1 
+}  
+
+
+\newenvironment{black-env}
+{\setbeamercolor{structure}{fg=black-base}}
+{\setbeamercolor{structure}{fg=structure-color}}
+\newenvironment{red-env}
+{\setbeamercolor{structure}{fg=red-base}}
+{\setbeamercolor{structure}{fg=structure-color}}
+\newenvironment{green-env}
+{\setbeamercolor{structure}{fg=green-base}}
+{\setbeamercolor{structure}{fg=structure-color}}
+\newenvironment{blue-env}
+{\setbeamercolor{structure}{fg=blue-base}}
+{\setbeamercolor{structure}{fg=structure-color}}
+
+\newtcolorbox{invisible-box}[1]{colback=black!0,colframe=black!0,coltitle=structure,#1}
+
+
+\newtcolorbox{fancygreenbox}[1]{
+	enhanced,
+	colback=green!5,
+	title style={left color=green!50!black, right color=green!50!black!60},
+	frame style={drop shadow},
+	colframe=green!50!black, 
+	#1
+} 
+
+\newtcolorbox{fancybluebox}[1]{
+	enhanced,
+	colback=blue!5,
+	title style={left color=blue!30!black, right color=blue!30!black!60},
+	frame style={drop shadow},
+	colframe=blue!30!black, 
+	#1
+} 

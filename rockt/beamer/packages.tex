@@ -1,0 +1,80 @@
+\usepackage{etex} %fixes No room for a new \dimen bug
+\usepackage[english]{babel} 
+\usepackage[utf8]{inputenc}
+\geometry{paperwidth=147mm,paperheight=110mm, left=5mm, right=5mm}
+\usepackage[]{styles/my_theme} 
+\usepackage{amsmath} 
+\usepackage{amssymb}
+\usepackage{ngerman} 
+\usepackage{amsmath,amsthm,amsfonts,amssymb,graphicx}
+\usepackage{multicol}
+\usepackage{color} 
+\usepackage{listings}  
+\usepackage{hyperref} 
+\usepackage[vlined,boxed,linesnumbered]{algorithm2e}
+\usepackage{tikz}
+\usetikzlibrary{calc,trees,positioning,arrows,chains,shapes.geometric,%
+    decorations.pathreplacing,decorations.pathmorphing,shapes,%
+    matrix,shapes.symbols,fit,decorations}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{ulem} %durchstreichen
+\usepackage{wasysym} %smileys
+\usepackage[absolute,overlay]{textpos}  
+\usepackage{soul}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{styles/tcolorbox}
+\usepackage{rotating}
+\usepackage{pgf}
+\usepackage{xparse}
+\input{styles/tcbtheorems.code}
+\input{styles/tcbskins.code}  
+\input{styles/tcbhooks.code}  
+\input{styles/tcbskins.code}
+
+\usetikzlibrary{shadows}  
+\usetikzlibrary{decorations.pathmorphing}
+
+%Scala support
+\usepackage{listings} 
+% "define" Scala
+\lstdefinelanguage{scala}{
+  morekeywords={abstract,case,catch,class,def,%
+    do,else,extends,false,final,finally,%
+    for,if,implicit,import,match,mixin,%
+    new,null,object,override,package,%
+    private,protected,requires,return,sealed,%
+    super,this,throw,trait,true,try,%
+    type,val,var,while,with,yield},
+  otherkeywords={=>,<-,<\%,<:,>:,\#,@},
+  sensitive=true,
+  morecomment=[l]{//},
+  morecomment=[n]{/*}{*/},
+  morestring=[b]",
+  morestring=[b]',
+  morestring=[b]"""
+}
+ 
+% Default settings for code listings
+\lstset{frame=tb,
+  language=scala,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+%  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  frame=none,
+%  breaklines=true,
+  breakatwhitespace=true
+  tabsize=3
+}

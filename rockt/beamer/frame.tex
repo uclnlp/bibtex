@@ -1,0 +1,37 @@
+\setbeamertemplate{footline}[frame number]
+\beamertemplatenavigationsymbolsempty
+
+\lstset {language=Java,
+tabsize=2,
+showtabs= true,
+basicstyle=\scriptsize
+} 
+ 
+\setbeamertemplate{footline}
+{%
+\structure{\hrule height 1pt}
+\begin{beamercolorbox}[wd=0.9\textwidth,ht=3ex,dp=1.5ex,leftskip=.5em,rightskip=.5em]{author
+in head/foot}%
+\usebeamerfont{author in head/foot}%
+%\hfill 
+\theAuthor
+\hspace{2em}\structure{\theTitle}
+\end{beamercolorbox}%
+\vspace*{-4.5ex}\hspace*{0.95\textwidth}%
+\begin{beamercolorbox}[wd=0.1\textwidth,ht=3ex,dp=1.5ex,left,leftskip=.5em]{title
+in head/foot}%
+\usebeamerfont{title in head/foot}%
+\hfill\hspace{27em}\insertframenumber/\inserttotalframenumber
+\end{beamercolorbox}%
+}
+
+\addtobeamertemplate{headline}{}
+{%
+\begin{flushright}
+\begin{tikzpicture}[remember picture,overlay]
+\node[left, yshift=.772cm,
+xshift=.1cm]{\includegraphics[height=2.8em]{graphics/ucl_logo_black.png}};
+\end{tikzpicture}
+\end{flushright}
+\vskip -0.84cm 
+}
