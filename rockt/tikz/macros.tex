@@ -1,0 +1,14 @@
+% relative positioning
+\newcommand{\at}[3]{
+  \begin{scope}[shift={(#1,#2)}]
+    #3
+  \end{scope} 
+}
+
+% scaling
+\newcommand{\scale}[2]{
+  % \begin{scope}[transform canvas={scale=#1}]
+  \begin{scope}[scale=#1]
+    #2
+  \end{scope}
+}
