@@ -1,3 +1,5 @@
+\usetikzlibrary{matrix, calc, arrows, decorations.markings}
+
 % relative positioning
 \newcommand{\at}[3]{
   \begin{scope}[shift={(#1,#2)}]
@@ -12,3 +14,16 @@
     #2
   \end{scope}
 }
+
+% naming
+\newcommand{\name}[2]{
+  \begin{scope}[local bounding box=#1]
+    #2
+  \end{scope}
+}
+
+% shorting both ends of an arrow
+\tikzset{ shorten <>/.style={ shorten >=#1, shorten <=#1 } }
+
+% thick arrow
+\tikzstyle{arrow}=[draw, -latex, very thick] 
