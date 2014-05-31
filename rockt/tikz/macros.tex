@@ -22,8 +22,40 @@
   \end{scope}
 }
 
-% shorting both ends of an arrow
+% shortening both ends of an arrow
 \tikzset{ shorten <>/.style={ shorten >=#1, shorten <=#1 } }
 
-% thick arrow
-\tikzstyle{arrow}=[draw, -latex, very thick] 
+% arrows
+\tikzstyle{arrow}=[draw, -latex, thick] 
+\tikzstyle{axis}=[draw, -stealth, thick]
+\tikzstyle{vector}=[arrow, very thick]
+
+% coordinate systems
+\newcommand{\coordtwo}{
+  \node (0) at (0, 0) {};
+  \node (1) at (0, 3) {};
+  \node (2) at (3, 0) {};
+  \draw[axis] (0.center) to (1);
+  \draw[axis] (0.center) to (2);
+}
+
+\newcommand{\coordtwogrid}{
+  \coordtwo
+  \draw[help lines] (0,0) grid (2.5,2.5);
+}
+
+\newcommand{\coordthree}{
+  \coordtwo
+  \node (3) at (1, 1.5) {};
+  \draw[axis] (0.center) to (3);
+}
+
+% \getwidthofnode will measure the width of the node given as its second
+% parameter and store it into the first parameter.
+\makeatletter
+\newcommand\getwidthofnode[2]{%
+    \pgfextractx{#1}{\pgfpointanchor{#2}{east}}%
+    \pgfextractx{\pgf@xa}{\pgfpointanchor{#2}{west}}% \pgf@xa is a length defined by PGF for temporary storage. No need to create a new temporary length.
+    \addtolength{#1}{-\pgf@xa}%
+}
+\makeatother
