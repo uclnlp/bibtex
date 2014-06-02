@@ -9,7 +9,6 @@
 \usepackage{multicol}
 \usepackage{color} 
 \usepackage{listings}  
-\usepackage{hyperref} 
 \usepackage[vlined,boxed,linesnumbered]{algorithm2e}
 \usepackage{tikz}
 \usetikzlibrary{calc,trees,positioning,arrows,chains,shapes.geometric,%
@@ -30,9 +29,32 @@
 \usepackage{rotating}
 \usepackage{pgf}
 \usepackage{xparse}
+\usepackage{natbib}
 
 \usetikzlibrary{shadows}  
 \usetikzlibrary{decorations.pathmorphing}
+
+\usepackage{hyperref}
+\hypersetup{
+    bookmarks=true,         % show bookmarks bar?
+    unicode=false,          % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=false,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdftitle={My title},    % title
+    pdfauthor={Author},     % author
+    pdfsubject={Subject},   % subject of the document
+    pdfcreator={Creator},   % creator of the document
+    pdfproducer={Producer}, % producer of the document
+    pdfkeywords={keyword1} {key2} {key3}, % list of keywords
+    pdfnewwindow=true,      % links in new window
+    colorlinks=true,        % false: boxed links; true: colored links
+    linkcolor=black,        % color of internal links (change box color with linkbordercolor)
+    citecolor=dark-blue,    % color of links to bibliography
+    filecolor=black,        % color of file links
+    urlcolor=black          % color of external links
+}
 
 %Scala support
 \usepackage{listings} 

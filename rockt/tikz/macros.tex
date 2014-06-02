@@ -29,6 +29,7 @@
 \tikzstyle{arrow}=[draw, -latex, thick] 
 \tikzstyle{axis}=[draw, -stealth, thick]
 \tikzstyle{vector}=[arrow, very thick]
+\tikzstyle{mapping}=[draw, -open triangle 45, very thick, color=red!60!black]
 
 % coordinate systems
 \newcommand{\coordtwo}{
@@ -54,8 +55,7 @@
 % parameter and store it into the first parameter.
 \makeatletter
 \newcommand\getwidthofnode[2]{%
-    \pgfextractx{#1}{\pgfpointanchor{#2}{east}}%
-    \pgfextractx{\pgf@xa}{\pgfpointanchor{#2}{west}}% \pgf@xa is a length defined by PGF for temporary storage. No need to create a new temporary length.
-    \addtolength{#1}{-\pgf@xa}%
+  \pgfextractx{#1}{\pgfpointanchor{#2}{east}}%
+  \pgfextractx{\pgf@xa}{\pgfpointanchor{#2}{west}}% \pgf@xa is a length defined by PGF for temporary storage. No need to create a new temporary length.
+  \addtolength{#1}{-\pgf@xa}%
 }
-\makeatother
