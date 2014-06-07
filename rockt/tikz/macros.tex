@@ -22,6 +22,13 @@
   \end{scope}
 }
 
+% hiding
+\newcommand{\hide}[2]{
+  \begin{scope}[onslide={<#1>{every node/.append style={opacity=0.1}, every path/.append style={opacity=0.1}}}]
+    #2
+  \end{scope}
+}
+
 % shortening both ends of an arrow
 \tikzset{ shorten <>/.style={ shorten >=#1, shorten <=#1 } }
 
@@ -29,7 +36,7 @@
 \tikzstyle{arrow}=[draw, -latex, thick] 
 \tikzstyle{axis}=[draw, -stealth, thick]
 \tikzstyle{vector}=[arrow, very thick]
-\tikzstyle{mapping}=[draw, -open triangle 45, very thick, color=red!60!black]
+\tikzstyle{mapping}=[draw, -open triangle 45, very thick, color=hidden]
 
 % coordinate systems
 \newcommand{\coordtwo}{
@@ -59,3 +66,12 @@
   \pgfextractx{\pgf@xa}{\pgfpointanchor{#2}{west}}% \pgf@xa is a length defined by PGF for temporary storage. No need to create a new temporary length.
   \addtolength{#1}{-\pgf@xa}%
 }
+
+% beamer util
+\tikzset{onslide/.code args={<#1>#2}{%
+  \only<#1>{\pgfkeysalso{#2}} % \pgfkeysalso doesn't change the path
+}}
+
+\tikzset{temporal/.code args={<#1>#2#3#4}{%
+  \temporal<#1>{\pgfkeysalso{#2}}{\pgfkeysalso{#3}}{\pgfkeysalso{#4}} % \pgfkeysalso doesn't change the path
+}}
