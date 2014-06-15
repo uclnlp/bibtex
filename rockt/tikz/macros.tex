@@ -75,3 +75,7 @@
 \tikzset{temporal/.code args={<#1>#2#3#4}{%
   \temporal<#1>{\pgfkeysalso{#2}}{\pgfkeysalso{#3}}{\pgfkeysalso{#4}} % \pgfkeysalso doesn't change the path
 }}
+
+%\newcommand{\tikzwrap}[2]{\tikz[remember picture,baseline,inner xsep=0pt]\node[anchor=base] (#1) {#2};}
+
+\newcommand\tikzwrap[2]{\tikz[remember picture,baseline=(#1.base)]\node[inner sep=0,outer sep=0](#1){#2};}%
