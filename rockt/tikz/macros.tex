@@ -54,7 +54,7 @@
 
 \newcommand{\coordthree}{
   \coordtwo
-  \node (3) at (1, 1.5) {};
+  \node (3) at (-1, -1.5) {};
   \draw[axis] (0.center) to (3);
 }
 
@@ -79,3 +79,27 @@
 %\newcommand{\tikzwrap}[2]{\tikz[remember picture,baseline,inner xsep=0pt]\node[anchor=base] (#1) {#2};}
 
 \newcommand\tikzwrap[2]{\tikz[remember picture,baseline=(#1.base)]\node[inner sep=0,outer sep=0](#1){#2};}%
+
+
+
+\newcommand{\includeslide}[3]{
+  % trim=left bottom right top,clip
+  \begin{tikzpicture}
+    \node[] (#1) at (0,0) { \includegraphics[page=#2, width=.9\colwidth, trim=0.5cm 0.5cm 0.5cm 1cm, clip]{#3} };
+  \end{tikzpicture}
+}
+
+\newcommand{\includeslidetrim}[4]{
+  % \addframe{
+  % trim=left bottom right top,clip
+  \begin{tikzpicture}
+    \node[] (#1) at (0,0) { \includegraphics[page=#2, width=.9\colwidth, trim=#3, clip]{#4} };
+  \end{tikzpicture}
+  % }
+}
+
+\newcommand{\addframe}[1]{
+  \begin{tikzpicture}
+    \node[draw, inner sep = 1pt, ultra thick] {#1};
+  \end{tikzpicture}
+}
