@@ -66,11 +66,11 @@
 \newcommand{\tImplies}[2]{\ten{T}_{\rightarrow} \times_1 #1 \times_2 #2 }
 
 \newcommand{\lPair}[2]{\left<\lConst{#1},\lConst{#2}\right>}
-\newcommand{\lImplies}[2]{#1 \rightarrow #2}
+\newcommand{\lImplies}[2]{#1 \Rightarrow #2}
 \newcommand{\lApply}[2]{#1\(#2\) }
 
 \newcommand{\lForm}{\mathcal{F}}
-\newcommand{\lImp}{\implies}
+\newcommand{\lImp}{\Rightarrow}
 \newcommand{\lTrue}{\texttt{true}}
 \newcommand{\lFalse}{\texttt{false}}
 
@@ -93,3 +93,25 @@
 \global\long\def\ft{t^{-}}
 
 
+
+% Fixing autoref capitalization
+\makeatletter
+\def\HyLang@english{%
+  \def\equationautorefname{Equation}%
+  \def\footnoteautorefname{footnote}%
+  \def\itemautorefname{item}%
+  \def\figureautorefname{Figure}%
+  \def\tableautorefname{Table}%
+  \def\partautorefname{Part}%
+  \def\appendixautorefname{Appendix}%
+  \def\chapterautorefname{Chapter}%
+  \def\sectionautorefname{Section}%
+  \def\subsectionautorefname{Section}%
+  \def\subsubsectionautorefname{Section}%
+  \def\paragraphautorefname{paragraph}%
+  \def\subparagraphautorefname{subparagraph}%
+  \def\FancyVerbLineautorefname{line}%
+  \def\theoremautorefname{Theorem}%
+  \def\pageautorefname{page}%
+}
+\makeatother
