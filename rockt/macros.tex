@@ -7,6 +7,8 @@
 \newcommand{\eqdef}{=\vcentcolon}
 
 \DeclareMathOperator*{\argmax}{arg\,max}
+\let\negold\neg
+\renewcommand{\neg}{\negold\,}
 
 %%% Aliases
 \let\op\operatorname
@@ -71,8 +73,8 @@
 
 \newcommand{\lForm}{\mathcal{F}}
 \newcommand{\lImp}{\Rightarrow}
-\newcommand{\lTrue}{\texttt{true}}
-\newcommand{\lFalse}{\texttt{false}}
+\newcommand{\lTrue}{\text{true}}
+\newcommand{\lFalse}{\text{false}}
 
 \newcommand{\lConst}[1]{\text{\textsc{#1}}}
 \newcommand{\lRel}[1]{\mathit{#1}}
