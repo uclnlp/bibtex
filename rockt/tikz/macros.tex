@@ -1,11 +1,28 @@
 \usetikzlibrary{matrix, calc, arrows, decorations.markings}
 
+\makeatletter
+\tikzset{%
+  prefix node name/.code={%
+    \tikzset{%
+      name/.code={\edef\tikz@fig@name{#1 ##1}}
+    }%
+  }%
+}
+\makeatother
+
 % relative positioning
 \newcommand{\at}[3]{
   \begin{scope}[shift={(#1,#2)}]
     #3
   \end{scope} 
 }
+
+\newcommand{\shift}[4]{
+  \begin{scope}[shift={(#1,#2,-#3)}]
+    #4
+  \end{scope} 
+}
+
 
 % scaling
 \newcommand{\scale}[2]{
@@ -18,6 +35,12 @@
 % naming
 \newcommand{\name}[2]{
   \begin{scope}[local bounding box=#1]
+    #2
+  \end{scope}
+}
+
+\newcommand{\prefix}[2]{
+  \begin{scope}[prefix node name=G1]
     #2
   \end{scope}
 }
