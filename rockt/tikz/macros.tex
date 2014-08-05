@@ -39,6 +39,21 @@
   \end{scope}
 }
 
+% highlight
+% naming
+\newcommand{\highlight}[1]{
+  \begin{scope}[local bounding box=tmp]
+    #1
+  \end{scope}
+  \node[fit = (tmp), draw, rectangle, color = red, inner sep=0pt] {};
+}
+
+\newcommand{\highlightnode}[1]{
+  \node[fit = (#1), draw, rectangle, color = red, inner sep=0pt] {};
+}
+
+
+
 \newcommand{\prefix}[2]{
   \begin{scope}[prefix node name=G1]
     #2
