@@ -1,0 +1,148 @@
+%\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+%\ProvidesPackage{tikztensor}[2014/07/25 tikztensor]
+%\RequirePackage{tikz}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,trees,positioning,arrows,chains,shapes.geometric,%
+  decorations.pathreplacing,decorations.pathmorphing,shapes,%
+  matrix,shapes.symbols,fit,decorations}
+
+\usepackage{xcolor}
+\usepackage{xparse}
+%\include{bibtex/rockt/tikz/macros}
+%\include{bibtex/rockt/tikz/shapes}  
+%\include{bibtex/rockt/colors}  
+
+
+\newcommand{\tikztensorx}{1}
+\newcommand{\tikztensory}{1}
+\newcommand{\tikztensorz}{1}
+
+\newcommand{\setcoordinates}[3]{
+  \renewcommand{\tikztensorx}{#1}
+  \renewcommand{\tikztensory}{#2}
+  \renewcommand{\tikztensorz}{#3}
+
+  \coordinate (0) at (0,0,0);
+  \coordinate (x) at (\tikztensorx,0,0);
+  \coordinate (y) at (0,\tikztensory,0);
+  \coordinate (z) at (0,0,-\tikztensorz);
+  \coordinate (xy) at (\tikztensorx,\tikztensory,0);
+  \coordinate (xz) at (\tikztensorx,0,-\tikztensorz);
+  \coordinate (yz) at (0,\tikztensory,-\tikztensorz);
+  \coordinate (xyz) at (\tikztensorx,\tikztensory,-\tikztensorz); 
+}
+
+\newcommand{\debugcoordinates}{
+  \foreach \xy in {0, x, y, z, xy, xz, yz, xyz}{
+    \node at (\xy) {\xy};
+  }
+}
+
+
+\newcommand{\tensorback}[1]{
+  \name{bottom}{\draw[black, fill = black!5, #1] (0) -- (x) -- (xz) -- (z) -- cycle;}
+  \name{back}{\draw[black, fill = black!5, #1] (z) -- (xz) -- (xyz) -- (yz) -- cycle;}
+  \name{left}{\draw[black, fill = black!5, #1] (0) -- (z) -- (yz) -- (y) -- cycle;}
+}
+
+\newcommand{\tensorfront}[1]{
+  % right
+  \draw[black, fill = black, fill opacity=0.15, #1] (x) -- (xz) -- (xyz) -- (xy) -- cycle;
+  % front
+  \draw[black, fill = black, fill opacity=0.05, #1] (0) -- (x) -- (xy) -- (y) -- cycle;
+  % top
+  \draw[black, fill = black, fill opacity=0.1, #1] (y) -- (xy) -- (xyz) -- (yz) -- cycle;
+}
+
+\DeclareDocumentCommand{\tensor}{O{} O{} m m m}{
+  \name{lhs}{
+   % \setcoordinates{#3 * 0.25}{#4 * 0.25}{#5 * 0.25}
+   % \tensorback{#1}
+    \tensorgrid{#3}{#4}{#5}
+    #2
+    
+    \setcoordinates{#3 * 0.25}{#4 * 0.25}{#5 * 0.25}
+    \tensorfront{#1}
+  }
+}
+
+
+
+\newcommand{\tensorgrid}[3]{
+    \foreach \i in {0,...,#1} {
+      \draw[opacity=0.2] (\i*0.25,0) -- (\i*0.25,#2*0.25);
+      \draw[opacity=0.2] (\i*0.25,#2*0.25) -- (\i*0.25,#2*0.25,-#3*0.25); 
+    }
+    \foreach \i in {0,...,#2} {
+      \draw[opacity=0.2] (0,\i*0.25) -- (#1*0.25,\i*0.25);
+      \draw[opacity=0.2] (#1*0.25,\i*0.25) -- (#1*0.25,\i*0.25,-#3*0.25); 
+    }
+    \foreach \i in {0,...,#3} {
+      \draw[opacity=0.2] (0,#2*0.25,-\i*0.25) -- (#1*0.25,#2*0.25,-\i*0.25);
+      \draw[opacity=0.2] (#1*0.25,0,-\i*0.25) -- (#1*0.25,#2*0.25,-\i*0.25);
+    }
+  % \pgfmathsetmacro\iIx{#1 -1}
+  % \pgfmathsetmacro\jIx{#2 -1}
+
+  % \ifnum#3=0
+  % \pgfmathsetmacro\kIx{#3}
+  % \pgfmathsetmacro\cellDepth{0}
+  % \else
+  % \pgfmathsetmacro\kIx{#3 -1}
+  % \pgfmathsetmacro\cellDepth{1}
+  % \fi   
+
+  % \foreach \k in {\kIx,...,0} {
+  %   \pgfmathsetmacro\cellOpacity{0.01 * \k}
+  %   \foreach \i in {0,...,\iIx} {
+  %     \foreach \j in {0,...,\jIx} {
+  %       \tensorshift[\i][\j][\k]{\tensor[draw=black, fill=black, opacity=\cellOpacity]{1}{1}{\cellDepth}}
+  %     }
+  %   }
+  % }
+}
+
+
+\DeclareDocumentCommand{\tensorop}{O{.5em} O{1.5em} m}{
+  \node[right = #1 of lhs.south east, yshift=#2] (op) {#3};
+  \node[right = #1 of 0 -| op] {};
+  \pgfgetlastxy{\nextx}{\nexty};
+}
+
+\DeclareDocumentCommand{\calculatenext}{O{.5em} O{2em} m}{
+  \node[right = #1 of #3.south east, yshift=#2] (tmp) {};
+  \pgfgetlastxy{\nextx}{\nexty};
+}
+
+\DeclareDocumentCommand{\setnext}{O{} m}{
+  \node[#1] at (#2) {};
+  \pgfgetlastxy{\nextx}{\nexty};
+}
+
+\DeclareDocumentCommand{\labelaxis}{O{black} m m m m}{
+  \draw[ultra thick, #1] (#2) -- node[midway, #4] {#5} (#3);
+}
+
+\DeclareDocumentCommand{\labelx}{O{blue} m}{
+  \labelaxis[#1]{0}{x}{below}{#2}
+}
+
+\DeclareDocumentCommand{\labely}{O{red} m}{
+  \labelaxis[#1]{0}{y}{left}{#2}
+}
+
+\DeclareDocumentCommand{\labelz}{O{dark-green} m}{
+  \labelaxis[#1]{y}{yz}{above left}{#2}
+}
+
+
+\DeclareDocumentCommand{\tensorshift}{O{0} O{0} O{0} m}{
+  \begin{scope}[shift={(#1 * 0.25,#2 * 0.25,-#3 * 0.25)}]
+    #4
+  \end{scope} 
+}
+
+
+
+%\endinput
