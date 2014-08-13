@@ -46,26 +46,33 @@
   \name{left}{\draw[black, fill = black!5, #1] (0) -- (z) -- (yz) -- (y) -- cycle;}
 }
 
-\newcommand{\tensorfront}[1]{
+\DeclareDocumentCommand{\tensorfront}{O{1} m}{
   % right
-  \draw[black, fill = black, fill opacity=0.15, #1] (x) -- (xz) -- (xyz) -- (xy) -- cycle;
-  % front
-  \draw[black, fill = black, fill opacity=0.05, #1] (0) -- (x) -- (xy) -- (y) -- cycle;
+  \draw[black, fill = black, fill opacity=0.15, #2] (x) -- (xz) -- (xyz) -- (xy) -- cycle;
   % top
-  \draw[black, fill = black, fill opacity=0.1, #1] (y) -- (xy) -- (xyz) -- (yz) -- cycle;
+  \draw[black, fill = black, fill opacity=0.1, #2] (y) -- (xy) -- (xyz) -- (yz) -- cycle;
+  % front
+  \ifnum #1=1
+  \draw[black, fill = black, fill opacity=0.05, #2] (0) -- (x) -- (xy) -- (y) -- cycle;
+  \fi
 }
 
-\DeclareDocumentCommand{\tensor}{O{} O{} m m m}{
+\DeclareDocumentCommand{\tensor}{O{} O{} O{1} O{1} m m m}{
   \name{lhs}{
    % \setcoordinates{#3 * 0.25}{#4 * 0.25}{#5 * 0.25}
    % \tensorback{#1}
-    \tensorgrid{#3}{#4}{#5}
+   \ifnum #3=1 \tensorgrid{#5}{#6}{#7} \fi
+
     #2
     
-    \setcoordinates{#3 * 0.25}{#4 * 0.25}{#5 * 0.25}
-    \tensorfront{#1}
+    \setcoordinates{#5 * 0.25}{#6 * 0.25}{#7 * 0.25}
+    \tensorfront[#4]{#1}
   }
 }
+
+%\DeclareDocumentCommand{\dummymacro}{O{} O{} O{3} O{4} m m m}{
+%#1 #2 #3 #4 #5 #6 #7
+%}
 
 
 
@@ -124,7 +131,7 @@
   \draw[ultra thick, #1] (#2) -- node[midway, #4] {#5} (#3);
 }
 
-\DeclareDocumentCommand{\labelx}{O{blue} m}{
+\DeclareDocumentCommand{\labelx}{O{dark-green} m}{
   \labelaxis[#1]{0}{x}{below}{#2}
 }
 
@@ -132,7 +139,7 @@
   \labelaxis[#1]{0}{y}{left}{#2}
 }
 
-\DeclareDocumentCommand{\labelz}{O{dark-green} m}{
+\DeclareDocumentCommand{\labelz}{O{blue} m}{
   \labelaxis[#1]{y}{yz}{above left}{#2}
 }
 

@@ -39,13 +39,13 @@
 %%% Tensorland
 \renewcommand\vec[1]{\textbf{#1}}
 \newcommand{\mat}[1]{\textbf{#1}}
-\newcommand{\ten}[1]{\mathcal{#1}}
-\newcommand{\frk}[1]{\mathfrak{#1}}
+\newcommand{\ten}[1]{\text{$\mathcal{#1}$}}
+\newcommand{\frk}[1]{\text{$\mathfrak{#1}$}}
 
 \newcommand{\circled}[1]{\raisebox{.5pt}{\textcircled{\raisebox{-.9pt} {#1}}}}
 \newcommand{\ci}[1]{\raisebox{.5pt}{\textcircled{\raisebox{-.9pt} {#1}}}}
 \newcommand{\pat}[3]{\noun{#2}--\emph{#1}--\noun{#3}}
-\newcommand{\rel}[1]{{\it #1}}
+%\newcommand{\rel}[1]{{\it #1}}
 \newcommand{\fact}[3]{\emph{#1}(\noun{#2},\noun{#3})}
 \newcommand{\tuple}[2]{(\noun{#1},\noun{#2})}
 \newcommand{\temp}[3]{\emph{#1}\ci{1}\emph{#2}\ci{2}\emph{#3}}
@@ -93,6 +93,33 @@
 \global\long\def\v{\mathbf{v}}
 \global\long\def\tt{t^{+}}
 \global\long\def\ft{t^{-}}
+
+
+%Vectorland
+\newcommand*{\lcdot}{\raisebox{-0.25ex}{\scalebox{1.5}{$\cdot$}}}
+\newcommand{\const}[1]{\text{\textsc{#1}}}
+\newcommand{\pred}[1]{\text{$\mathit{#1}$}}
+\newcommand{\fun}[1]{\pred{#1}}
+\newcommand{\rel}[1]{\pred{#1}}
+\newcommand{\any}{\text{$\lcdot$}}
+\newcommand{\var}[1]{\text{$#1$}}
+
+%%Operators
+\newcommand{\sneg}{\text{$\neg$}}
+\newcommand{\sand}{\text{$\wedge$}}
+\newcommand{\sor}{\text{$\vee$}}
+\newcommand{\simpl}{\text{$\Rightarrow$}}
+
+%%Quantifiers
+\newcommand{\sforall}{\text{$\forall$}}
+\newcommand{\sexists}{\text{$\exists$}}
+
+%%Optimization
+\newcommand{\loss}{\text{$\mathcal{L}$}}
+
+
+%%Misc
+\let\infinity\infty 
 
 
 
