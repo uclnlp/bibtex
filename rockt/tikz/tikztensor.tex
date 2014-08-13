@@ -57,57 +57,44 @@
   \fi
 }
 
-\DeclareDocumentCommand{\tensor}{O{} O{} O{1} O{1} m m m}{
+\DeclareDocumentCommand{\tensor}{O{} O{} O{1} O{1} O{1} O{1} m m m}{
   \name{lhs}{
    % \setcoordinates{#3 * 0.25}{#4 * 0.25}{#5 * 0.25}
    % \tensorback{#1}
-   \ifnum #3=1 \tensorgrid{#5}{#6}{#7} \fi
+   \tensorgrid[#3][#4][#5]{#7}{#8}{#9}
 
     #2
     
-    \setcoordinates{#5 * 0.25}{#6 * 0.25}{#7 * 0.25}
-    \tensorfront[#4]{#1}
+    \setcoordinates{#7 * 0.25}{#8 * 0.25}{#9 * 0.25}
+    \tensorfront[#6]{#1}
   }
 }
 
-%\DeclareDocumentCommand{\dummymacro}{O{} O{} O{3} O{4} m m m}{
-%#1 #2 #3 #4 #5 #6 #7
-%}
 
-
-
-\newcommand{\tensorgrid}[3]{
-    \foreach \i in {0,...,#1} {
-      \draw[opacity=0.2] (\i*0.25,0) -- (\i*0.25,#2*0.25);
-      \draw[opacity=0.2] (\i*0.25,#2*0.25) -- (\i*0.25,#2*0.25,-#3*0.25); 
+\DeclareDocumentCommand{\tensorgrid}{O{1} O{1} O{1} m m m}{
+    %slice vertically
+    \ifnum #1=1
+    \foreach \i in {0,...,#4} {
+      \draw[opacity=0.2] (\i*0.25,0) -- (\i*0.25,#5*0.25);
+      \draw[opacity=0.2] (\i*0.25,#5*0.25) -- (\i*0.25,#5*0.25,-#6*0.25); 
     }
-    \foreach \i in {0,...,#2} {
-      \draw[opacity=0.2] (0,\i*0.25) -- (#1*0.25,\i*0.25);
-      \draw[opacity=0.2] (#1*0.25,\i*0.25) -- (#1*0.25,\i*0.25,-#3*0.25); 
+    \fi
+    
+    %slice horizontally
+    \ifnum #2=1
+    \foreach \i in {0,...,#5} {
+      \draw[opacity=0.2] (0,\i*0.25) -- (#4*0.25,\i*0.25);
+      \draw[opacity=0.2] (#4*0.25,\i*0.25) -- (#4*0.25,\i*0.25,-#6*0.25); 
     }
-    \foreach \i in {0,...,#3} {
-      \draw[opacity=0.2] (0,#2*0.25,-\i*0.25) -- (#1*0.25,#2*0.25,-\i*0.25);
-      \draw[opacity=0.2] (#1*0.25,0,-\i*0.25) -- (#1*0.25,#2*0.25,-\i*0.25);
+    \fi
+
+    %slice laterally
+    \ifnum #3=1
+    \foreach \i in {0,...,#6} {
+      \draw[opacity=0.2] (0,#5*0.25,-\i*0.25) -- (#4*0.25,#5*0.25,-\i*0.25);
+      \draw[opacity=0.2] (#4*0.25,0,-\i*0.25) -- (#4*0.25,#5*0.25,-\i*0.25);
     }
-  % \pgfmathsetmacro\iIx{#1 -1}
-  % \pgfmathsetmacro\jIx{#2 -1}
-
-  % \ifnum#3=0
-  % \pgfmathsetmacro\kIx{#3}
-  % \pgfmathsetmacro\cellDepth{0}
-  % \else
-  % \pgfmathsetmacro\kIx{#3 -1}
-  % \pgfmathsetmacro\cellDepth{1}
-  % \fi   
-
-  % \foreach \k in {\kIx,...,0} {
-  %   \pgfmathsetmacro\cellOpacity{0.01 * \k}
-  %   \foreach \i in {0,...,\iIx} {
-  %     \foreach \j in {0,...,\jIx} {
-  %       \tensorshift[\i][\j][\k]{\tensor[draw=black, fill=black, opacity=\cellOpacity]{1}{1}{\cellDepth}}
-  %     }
-  %   }
-  % }
+    \fi
 }
 
 
