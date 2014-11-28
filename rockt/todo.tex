@@ -5,11 +5,13 @@
 \newcommand{\toref}{\textcolor{todoref}{\textbf{REF}}}
 \newcommand{\torefc}[1]{\textcolor{todoref}{\textbf{REF} #1}}
 \newcommand{\rockt}[1]{\textcolor{teal}{rockt: #1}}
+\newcommand{\sameer}[1]{\textcolor{purple}{sameer: #1}}
 \newcommand{\blah}{\textcolor{todo}{\textbf{???}}}
 
 \setstcolor{todo}
 \newcommand{\remove}[1]{\st{#1}}
-
+\newcommand{\comment}[1]{}
+\let\hide\comment
 
 \newboolean{hidecomments}
 \setboolean{hidecomments}{false}
@@ -20,6 +22,7 @@
   \renewcommand{\toref}{}
   \renewcommand{\torefc}[1]{}
   \renewcommand{\rockt}[1]{}
+  \newcommand{\sameer}[1]{}
   \renewcommand{\remove}[1]{}
   }{
 }
