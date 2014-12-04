@@ -6,7 +6,7 @@
 \newcommand{\torefc}[1]{\textcolor{todoref}{\textbf{REF} #1}}
 \newcommand{\rockt}[1]{\textcolor{teal}{rockt: #1}}
 \newcommand{\sameer}[1]{\textcolor{purple}{sameer: #1}}
-\newcommand{\seb}[1]{\textcolor{green}{seb: #1}}
+\newcommand{\seb}[1]{\textcolor{blue}{seb: #1}}
 \newcommand{\blah}{\textcolor{todo}{\textbf{???}}}
 
 \setstcolor{todo}
@@ -18,12 +18,13 @@
 \setboolean{hidecomments}{false}
 %\setboolean{hidecomments}{true} %rockt: careful with this! for the final version you still shouldn't have any todo commands left in the document
 \ifthenelse{\boolean{hidecomments}}{
- \renewcommand{\todo}{}
+  \renewcommand{\todo}{}
   \renewcommand{\todoc}[1]{}
   \renewcommand{\toref}{}
   \renewcommand{\torefc}[1]{}
   \renewcommand{\rockt}[1]{}
-  \newcommand{\sameer}[1]{}
+  \renewcommand{\sameer}[1]{}
+  \renewcommand{\seb}[1]{}
   \renewcommand{\remove}[1]{}
   }{
 }
