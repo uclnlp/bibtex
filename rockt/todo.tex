@@ -16,7 +16,7 @@
 
 \newboolean{hidecomments}
 \setboolean{hidecomments}{false}
-\setboolean{hidecomments}{true} %rockt: careful with this! for the final version you still shouldn't have any todo commands left in the document
+%\setboolean{hidecomments}{true} %rockt: careful with this! for the final version you still shouldn't have any todo commands left in the document
 \ifthenelse{\boolean{hidecomments}}{
   \renewcommand{\todo}{}
   \renewcommand{\todoc}[1]{}
