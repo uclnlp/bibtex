@@ -61,12 +61,12 @@
   \name{lhs}{
    % \setcoordinates{#3 * 0.25}{#4 * 0.25}{#5 * 0.25}
    % \tensorback{#1}
-   \tensorgrid[#3][#4][#5]{#7}{#8}{#9}
 
     #2
     
     \setcoordinates{#7 * 0.25}{#8 * 0.25}{#9 * 0.25}
     \tensorfront[#6]{#1}
+    \tensorgrid[#3][#4][#5]{#7}{#8}{#9}
   }
 }
 
@@ -75,24 +75,24 @@
     %slice vertically
     \ifnum #1=1
     \foreach \i in {0,...,#4} {
-      \draw[opacity=0.2] (\i*0.25,0) -- (\i*0.25,#5*0.25);
-      \draw[opacity=0.2] (\i*0.25,#5*0.25) -- (\i*0.25,#5*0.25,-#6*0.25); 
+      \draw[color=white] (\i*0.25,0) -- (\i*0.25,#5*0.25);
+      \draw[color=white] (\i*0.25,#5*0.25) -- (\i*0.25,#5*0.25,-#6*0.25); 
     }
     \fi
     
     %slice horizontally
     \ifnum #2=1
     \foreach \i in {0,...,#5} {
-      \draw[opacity=0.2] (0,\i*0.25) -- (#4*0.25,\i*0.25);
-      \draw[opacity=0.2] (#4*0.25,\i*0.25) -- (#4*0.25,\i*0.25,-#6*0.25); 
+      \draw[color=white] (0,\i*0.25) -- (#4*0.25,\i*0.25);
+      \draw[color=white] (#4*0.25,\i*0.25) -- (#4*0.25,\i*0.25,-#6*0.25); 
     }
     \fi
 
     %slice laterally
     \ifnum #3=1
     \foreach \i in {0,...,#6} {
-      \draw[opacity=0.2] (0,#5*0.25,-\i*0.25) -- (#4*0.25,#5*0.25,-\i*0.25);
-      \draw[opacity=0.2] (#4*0.25,0,-\i*0.25) -- (#4*0.25,#5*0.25,-\i*0.25);
+      \draw[color=white] (0,#5*0.25,-\i*0.25) -- (#4*0.25,#5*0.25,-\i*0.25);
+      \draw[color=white] (#4*0.25,0,-\i*0.25) -- (#4*0.25,#5*0.25,-\i*0.25);
     }
     \fi
 }
