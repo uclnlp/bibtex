@@ -15,21 +15,28 @@
   biburl    = {http://dblp.uni-trier.de/rec/bib/conf/emnlp/AugensteinRVB16},
   bibsource = {dblp computer science bibliography, http://dblp.org}
 }
-@unpuplished{bhoopchand2016learning,
-  title={{Learning Python Code Suggestion with a Sparse Pointer Network}},
-  author={Bhoopchand, Avishkar and Rockt{\"a}schel, Tim and Barr, Earl and Riedel, Sebastian},
-  note={Under review at ICLR},
-  year={2016}
+@article{bhoopchand2016learning,
+  author    = {Avishkar Bhoopchand and
+               Tim Rockt{\"{a}}schel and
+               Earl T. Barr and
+               Sebastian Riedel},
+  title     = {Learning Python Code Suggestion with a Sparse Pointer Network},
+  journal   = {CoRR},
+  volume    = {abs/1611.08307},
+  year      = {2016},
+  url       = {http://arxiv.org/abs/1611.08307},
+  timestamp = {Tue, 29 Aug 2017 15:03:42 +0200},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/BhoopchandRBR16},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
 }
-@article{bosnjak2016programming,
+@inproceedings{bosnjak2016programming,
   author    = {Matko Bosnjak and
                Tim Rockt{\"{a}}schel and 
 			   Jason Naradowsky and
 			   Sebastian Riedel},
-  title     = {Programming with a Differentiable Forth Interpreter},
-  journal   = {CoRR},
-  volume    = {abs/1605.06640},
-  year      = {2016},
+  title     = {Programming with a Differentiable Forth Interpreter}, 
+  booktitle = {International Conference on Machine Learning (ICML)},
+  year      = {2017},
   url       = {http://arxiv.org/abs/1605.06640},
   timestamp = {Wed, 01 Jun 2016 15:51:08 +0200},
   biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/RiedelBR16},
@@ -78,6 +85,31 @@
   booktitle={EMNLP Workshop on Natural Language Processing for Social Media (SocialNLP)},
   year={2016}
 }
+@inproceedings{farquhar2018treeqn,
+  author    = {Gregory Farquhar and
+               Tim Rockt{\"{a}}schel and
+               Maximilian Igl and
+               Shimon Whiteson},
+  title     = {{TreeQN and ATreeC: Differentiable Tree-Structured Models for Deep Reinforcement Learning}},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2018},
+  url       = {http://arxiv.org/abs/1710.11417},
+}
+@article{foerster2018dice,
+  author    = {Jakob Foerster and 
+  			   Gregory Farquhar and
+   	 		   Maruan Al-Shedivat and
+               Tim Rockt{\"{a}}schel and
+               Eric P. Xing and
+               Shimon Whiteson},
+  title     = {{DiCE: The Infinitely Differentiable Monte-Carlo Estimator}},
+  journal   = {CoRR},
+  volume    = {abs/1802.05098},
+  year      = {2018},
+  url       = {http://arxiv.org/abs/1802.05098},
+  archivePrefix = {arXiv},
+  eprint    = {1802.05098}
+}
 @inproceedings{huber2013extended,
   title={{Extended Feature Set for Chemical Named Entity Recognition and Indexing}},
   author={Huber, Torsten and Rockt{\"a}schel, Tim and Weidlich, Michael and Thomas, Philippe and Leser, Ulf},
@@ -99,13 +131,79 @@
   bibsource = {dblp computer science bibliography, http://dblp.org}
 }
 @article{krallinger2015chemdner,
-  title={The CHEMDNER corpus of chemicals and drugs and its annotation principles},
-  author={Krallinger, Martin and Rabal, Obdulia and Leitner, Florian and Vazquez, Miguel and Salgado, David and Lu, Zhiyong and Leaman, Robert and Lu, Yanan and Ji, Donghong and Lowe, Daniel M and others},
-  journal={Journal of Cheminformatics},
-  number={Suppl 1},
-  pages={S2},
-  year={2015},
-  publisher={Chemistry Central Ltd}
+  author    = {Martin Krallinger and
+               Obdulia Rabal and
+               Florian Leitner and
+               Miguel Vazquez and
+               David Salgado and
+               Zhiyong Lu and
+               Robert Leaman and
+               Yanan Lu and
+               Donghong Ji and
+               Daniel M. Lowe and
+               Roger A. Sayle and
+               Riza Theresa Batista{-}Navarro and
+               Rafal Rak and
+               Torsten Huber and
+               Tim Rockt{\"{a}}schel and
+               S{\'{e}}rgio Matos and
+               David Campos and
+               Buzhou Tang and
+               Hua Xu and
+               Tsendsuren Munkhdalai and
+               Keun Ho Ryu and
+               S. V. Ramanan and
+               P. Senthil Nathan and
+               Slavko Zitnik and
+               Marko Bajec and
+               Lutz Weber and
+               Matthias Irmer and
+               Saber A. Akhondi and
+               Jan A. Kors and
+               Shuo Xu and
+               Xin An and
+               Utpal Kumar Sikdar and
+               Asif Ekbal and
+               Masaharu Yoshioka and
+               Thaer M. Dieb and
+               Miji Choi and
+               Karin Verspoor and
+               Madian Khabsa and
+               C. Lee Giles and
+               Hongfang Liu and
+               Ravikumar Komandur Elayavilli and
+               Andre Lamurias and
+               Francisco M. Couto and
+               Hong{-}Jie Dai and
+               Richard Tzong{-}Han Tsai and
+               Caglar Ata and
+               Tolga Can and
+               Anabel Usie and
+               Rui Alves and
+               Isabel Segura{-}Bedmar and
+               Paloma Mart{\'{\i}}nez and
+               Julen Oyarzabal and
+               Alfonso Valencia},
+  title     = {The {CHEMDNER} corpus of chemicals and drugs and its annotation principles},
+  journal   = {J. Cheminformatics},
+  volume    = {7},
+  number    = {{S-1}},
+  pages     = {S2},
+  year      = {2015},
+  url       = {https://doi.org/10.1186/1758-2946-7-S1-S2},
+  doi       = {10.1186/1758-2946-7-S1-S2},
+  timestamp = {Wed, 14 Jun 2017 20:29:22 +0200},
+  biburl    = {http://dblp.org/rec/bib/journals/jcheminf/KrallingerRL15},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+@inproceedings{minervini2017adversarial,
+  author    = {Pasquale Minervini and
+  			   Thomas Demeester and
+               Tim Rockt{\"{a}}schel and 
+			   Sebastian Riedel},
+  title     = {Adversarial Sets for Regularised Neural Link Predictors}, 
+  booktitle = {Proceedings of the 33rd Conference on Uncertainty in Artificial Intelligence (UAI)},
+  year      = {2017}
 }
 @inproceedings{riedel2014wolfe,
     author={Sebastian Riedel and Sameer Singh and Vivek Srikumar and Tim Rockt{\"a}schel and Larysa Visengeriyeva and Jan Noessner}, 
@@ -182,10 +280,25 @@
   booktitle={International Conference on Learning Representations (ICLR)},
   year={2016}
 }
+@inproceedings{rocktaschel2017end,
+  author    = {Tim Rockt{\"{a}}schel and
+               Sebastian Riedel},
+  title     = {End-to-end Differentiable Proving},
+  booktitle = {Advances in Neural Information Processing Systems 30: Annual Conference
+               on Neural Information Processing Systems 2017, 4-9 December 2017,
+               Long Beach, CA, {USA}},
+  pages     = {3791--3803},
+  year      = {2017},
+  crossref  = {DBLP:conf/nips/2017},
+  url       = {http://papers.nips.cc/paper/6969-end-to-end-differentiable-proving},
+  timestamp = {Mon, 27 Nov 2017 12:38:48 +0100},
+  biburl    = {http://dblp.org/rec/bib/conf/nips/Rocktaschel017},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
 @inproceedings{sanchez2015towards,
   title={{Towards Extracting Faithful and Descriptive Representations of Latent Variable Models}},
   author={Sanchez, Ivan and Rockt{\"a}schel, Tim and Riedel, Sebastian and Singh, Sameer},
-  booktitle={AAAI Spring Symposium on Knowledge Representation and Reasoning},
+  booktitle={AAAI Spring Symposium on Knowledge Representation and Reasoning (KRR)},
   year={2015}
 }
 @inproceedings{singh2014designing,
@@ -268,7 +381,8 @@
   timestamp = {Fri, 01 Jul 2016 14:44:15 +0200},
   biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/AbadiABBCCCDDDG16},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@article{abu1990learning,
+}
+@article{abu1990learning,
   author    = {Yaser S. Abu{-}Mostafa},
   title     = {Learning from hints in neural networks},
   journal   = {J. Complexity},
@@ -411,11 +525,60 @@
   biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/Al-RfouAAa16},
   bibsource = {dblp computer science bibliography, http://dblp.org}
 }
+@inproceedings{alamanis2016convolutional,
+  author    = {Miltiadis Allamanis and
+               Hao Peng and
+               Charles A. Sutton},
+  title     = {A Convolutional Attention Network for Extreme Summarization of Source
+               Code},
+  booktitle = {Proceedings of the 33nd International Conference on Machine Learning,
+               {ICML} 2016, New York City, NY, USA, June 19-24, 2016},
+  pages     = {2091--2100},
+  year      = {2016},
+  crossref  = {DBLP:conf/icml/2016},
+  url       = {http://jmlr.org/proceedings/papers/v48/allamanis16.html},
+  timestamp = {Tue, 12 Jul 2016 21:51:16 +0200},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/conf/icml/AllamanisPS16},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+@inproceedings{allamanis2016learning,
+  author    = {Miltiadis Allamanis and
+               Pankajan Chanthirasegaran and
+               Pushmeet Kohli and
+               Charles A. Sutton},
+  title     = {Learning Continuous Semantic Representations of Symbolic Expressions},
+  booktitle = {Proceedings of the 34th International Conference on Machine Learning,
+               {ICML} 2017, Sydney, NSW, Australia, 6-11 August 2017},
+  pages     = {80--88},
+  year      = {2017},
+  crossref  = {DBLP:conf/icml/2017},
+  url       = {http://proceedings.mlr.press/v70/allamanis17a.html},
+  timestamp = {Wed, 16 Aug 2017 11:08:55 +0200},
+  biburl    = {http://dblp.org/rec/bib/conf/icml/AllamanisCKS17},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
 @article{anandkumar2012tensor,
   title={Tensor decompositions for learning latent variable models},
   author={Anandkumar, Anima and Ge, Rong and Hsu, Daniel and Kakade, Sham M and Telgarsky, Matus},
   journal={arXiv preprint arXiv:1210.7559},
   year={2012}
+}
+@inproceedings{andreas2016learning,
+  author    = {Jacob Andreas and
+               Marcus Rohrbach and
+               Trevor Darrell and
+               Dan Klein},
+  title     = {Learning to Compose Neural Networks for Question Answering},
+  booktitle = {{NAACL} {HLT} 2016, The 2016 Conference of the North American Chapter
+               of the Association for Computational Linguistics: Human Language Technologies,
+               San Diego California, USA, June 12-17, 2016},
+  pages     = {1545--1554},
+  year      = {2016},
+  crossref  = {DBLP:conf/naacl/2016},
+  url       = {http://aclweb.org/anthology/N/N16/N16-1181.pdf},
+  timestamp = {Tue, 13 Sep 2016 20:32:15 +0200},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/conf/naacl/AndreasRDK16},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
 }
 @inproceedings{andrychowicz2016learning,
   author    = {Marcin Andrychowicz and
@@ -518,14 +681,15 @@
   timestamp = {Wed, 01 Oct 2014 15:00:04 +0200},
   biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/BahdanauCB14},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@inproceedings{beltagy2013montague,
+}
+@inproceedings{beltagy2013montague,
  author    = {Islam Beltagy and
                Cuong Chau and
                Gemma Boleda and
                Dan Garrette and
                Katrin Erk and
                Raymond J. Mooney},
-  title     = {Montague Meets Markov: Deep Semantics with Probabilistic Logical Form},
+  title     = {{Montague Meets Markov: Deep Semantics with Probabilistic Logical Form}},
   booktitle = {Proceedings of the Second Joint Conference on Lexical and Computational
                Semantics, *SEM 2013, June 13-14, 2013, Atlanta, Georgia, {USA.}},
   pages     = {11--21},
@@ -581,7 +745,15 @@
   timestamp = {Mon, 01 Jun 2015 14:13:54 +0200},
   biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/BeltagyRCEM15},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@article{bender2013linguistic,
+}
+@article{beltagy2017representing,
+  title={Representing meaning with a combination of logical and distributional models},
+  author={Beltagy, Islam and Roller, Stephen and Cheng, Pengxiang and Erk, Katrin and Mooney, Raymond J},
+  journal={Computational Linguistics},
+  year={2017},
+  publisher={MIT Press}
+}
+@article{bender2013linguistic,
   title={Linguistic fundamentals for natural language processing: 100 essentials from morphology and syntax},
   author={Bender, Emily M},
   journal={Synthesis Lectures on Human Language Technologies},
@@ -641,6 +813,32 @@
   author={Bertsimas, Dimitris and Tsitsiklis, John N},
   year={1997},
   publisher={Athena Scientific Belmont, MA}
+}
+@article{besold2017neural,
+  author    = {Tarek R. Besold and
+               Artur S. d'Avila Garcez and
+               Sebastian Bader and
+               Howard Bowman and
+               Pedro M. Domingos and
+               Pascal Hitzler and
+               Kai{-}Uwe K{\"{u}}hnberger and
+               Lu{\'{\i}}s C. Lamb and
+               Daniel Lowd and
+               Priscila Machado Vieira Lima and
+               Leo de Penning and
+               Gadi Pinkas and
+               Hoifung Poon and
+               Gerson Zaverucha},
+  title     = {Neural-Symbolic Learning and Reasoning: {A} Survey and Interpretation},
+  journal   = {CoRR},
+  volume    = {abs/1711.03902},
+  year      = {2017},
+  url       = {http://arxiv.org/abs/1711.03902},
+  archivePrefix = {arXiv},
+  eprint    = {1711.03902},
+  timestamp = {Fri, 15 Dec 2017 13:46:38 +0100},
+  biburl    = {http://dblp.org/rec/bib/journals/corr/abs-1711-03902},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
 }
 @inproceedings{bollacker2008freebase,
   author    = {Kurt D. Bollacker and
@@ -728,9 +926,8 @@
 @inproceedings{bouchard2015approximate,
   title={On approximate reasoning capabilities of low-rank vector spaces},
   author={Bouchard, Guillaume and Singh, Sameer and Trouillon, Theo},
-  booktitle={Proceedings of the 20015 AAAI Spring Symposium on Knowledge Representation and Reasoning (KRR): Integrating Symbolic and Neural Approaches},
-  year={2015},
-  publisher={Citeseer}
+  booktitle={Proceedings of the 2015 AAAI Spring Symposium on Knowledge Representation and Reasoning (KRR): Integrating Symbolic and Neural Approaches},
+  year={2015}
 }
 @inproceedings{bowman2013can,
   author    = {Samuel R. Bowman},
@@ -770,7 +967,8 @@
   timestamp = {Wed, 14 Oct 2015 09:56:24 +0200},
   biburl    = {http://dblp.uni-trier.de/rec/bib/conf/emnlp/BowmanAPM15},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@inproceedings{bowman2016fast,
+}
+@inproceedings{bowman2016fast,
   author    = {Samuel R. Bowman and
                Jon Gauthier and
                Abhinav Rastogi and
@@ -803,6 +1001,22 @@
   pages={1--122},
   year={2011},
   publisher={Now Publishers Inc.}
+}
+@inproceedings{branavan2011learning,
+  author    = {S. R. K. Branavan and
+               David Silver and
+               Regina Barzilay},
+  title     = {Learning to Win by Reading Manuals in a Monte-Carlo Framework},
+  booktitle = {The 49th Annual Meeting of the Association for Computational Linguistics:
+               Human Language Technologies, Proceedings of the Conference, 19-24
+               June, 2011, Portland, Oregon, {USA}},
+  pages     = {268--277},
+  year      = {2011},
+  crossref  = {DBLP:conf/acl/2011},
+  url       = {http://www.aclweb.org/anthology/P11-1028},
+  timestamp = {Fri, 02 Dec 2011 14:17:37 +0100},
+  biburl    = {http://dblp.org/rec/bib/conf/acl/BranavanSB11},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
 }
 @techreport{broomhead1988radial,
   title={Radial basis functions, multi-variable functional interpolation and adaptive networks},
@@ -844,7 +1058,8 @@
   timestamp = {Tue, 12 Feb 2013 08:08:01 +0100},
   biburl    = {http://dblp.uni-trier.de/rec/bib/conf/wsdm/CarlsonBWHM10},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@article{carroll1970analysis,
+}
+@article{carroll1970analysis,
   title={Analysis of individual differences in multidimensional scaling via an N-way generalization of “Eckart-Young” decomposition},
   author={Carroll, J Douglas and Chang, Jih-Jie},
   journal={Psychometrika},
@@ -867,7 +1082,8 @@
   timestamp = {Mon, 19 Dec 2016 13:30:27 +0100},
   biburl    = {http://dblp.uni-trier.de/rec/bib/conf/acl/ChangRR07},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@article{chang2013multi,
+}
+@article{chang2013multi,
   title={Multi-Relational Latent Semantic Analysis},
   author={Chang, Kai-Wei and Yih, Wen-tau and Meek, Christopher},
   year={2013}
@@ -895,6 +1111,22 @@
   journal={arXiv preprint arXiv:1511.05641},
   year={2015}
 }
+@inproceedings{chen2016thorough,
+  author    = {Danqi Chen and
+               Jason Bolton and
+               Christopher D. Manning},
+  title     = {A Thorough Examination of the CNN/Daily Mail Reading Comprehension
+               Task},
+  booktitle = {Proceedings of the 54th Annual Meeting of the Association for Computational
+               Linguistics, {ACL} 2016, August 7-12, 2016, Berlin, Germany, Volume
+               1: Long Papers},
+  year      = {2016},
+  crossref  = {DBLP:conf/acl/2016-1},
+  url       = {http://aclweb.org/anthology/P/P16/P16-1223.pdf},
+  timestamp = {Mon, 15 Aug 2016 20:10:51 +0200},
+  biburl    = {http://dblp.org/rec/bib/conf/acl/ChenBM16},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
 @inproceedings{chorowski2015attention,
   author    = {Jan Chorowski and
                Dzmitry Bahdanau and
@@ -912,7 +1144,8 @@
   timestamp = {Fri, 08 Apr 2016 19:32:52 +0200},
   biburl    = {http://dblp.uni-trier.de/rec/bib/conf/nips/ChorowskiBSCB15},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@inproceedings{clark2007combining,
+}
+@inproceedings{clark2007combining,
   author    = {Stephen Clark and
                Stephen Pulman},
   title     = {Combining Symbolic and Distributional Models of Meaning},
@@ -951,7 +1184,8 @@
   timestamp = {Wed, 01 Jun 2016 15:51:07 +0200},
   biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/Cohen16b},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@article{cohn2013modelling,
+}
+@article{cohn2013modelling,
   title={Modelling Annotator Bias with Multi-task Gaussian Processes: An Application to Machine Translation Quality Estimation},
   author={Cohn, Trevor and Specia, Lucia},
   year={2013}
@@ -1043,16 +1277,16 @@
   timestamp = {Tue, 02 May 2006 09:03:19 +0200},
   biburl    = {http://dblp.uni-trier.de/rec/bib/conf/mlcw/DaganGM05},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@article{das2016chains,
+}
+@inproceedings{das2016chains,
   author    = {Rajarshi Das and
                Arvind Neelakantan and
                David Belanger and
                Andrew McCallum},
   title     = {Chains of Reasoning over Entities, Relations, and Text using Recurrent
                Neural Networks},
-  journal   = {CoRR},
-  volume    = {abs/1607.01426},
-  year      = {2016},
+  booktitle = {Conference of the European Chapter of the Association for Computational Linguistics (EACL)},
+  year      = {2017},
   url       = {http://arxiv.org/abs/1607.01426},
   timestamp = {Tue, 02 Aug 2016 12:59:27 +0200},
   biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/DasNBM16},
@@ -1079,6 +1313,15 @@
   timestamp = {Fri, 22 Nov 2013 12:57:23 +0100},
   biburl    = {http://dblp.uni-trier.de/rec/bib/conf/emnlp/LacalleL13},
   bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+@inproceedings{ding1995neural,
+  title={Neural prolog-the concepts, construction and mechanism},
+  author={Ding, Liya},
+  booktitle={Systems, Man and Cybernetics, 1995. Intelligent Systems for the 21st Century., IEEE International Conference on},
+  volume={4},
+  pages={3603--3608},
+  year={1995},
+  organization={IEEE}
 }
 @inproceedings{dong2014knowledge,
   author    = {Xin Dong and
@@ -1119,7 +1362,8 @@
   timestamp = {Mon, 25 Mar 2013 23:10:01 +0100},
   biburl    = {http://dblp.uni-trier.de/rec/bib/conf/acl/DruckMM09},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@article{duchi2011adaptive,
+}
+@article{duchi2011adaptive,
   author    = {John C. Duchi and
                Elad Hazan and
                Yoram Singer},
@@ -1169,7 +1413,22 @@
   timestamp = {Thu, 27 Nov 2008 10:42:33 +0100},
   biburl    = {http://dblp.uni-trier.de/rec/bib/journals/cacm/EtzioniBSW08},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@inproceedings{evgeniou2004regularized,
+}
+@article{evans2017learning,
+  author    = {Richard Evans and
+               Edward Grefenstette},
+  title     = {Learning Explanatory Rules from Noisy Data},
+  journal   = {CoRR},
+  volume    = {abs/1711.04574},
+  year      = {2017},
+  url       = {http://arxiv.org/abs/1711.04574},
+  archivePrefix = {arXiv},
+  eprint    = {1711.04574},
+  timestamp = {Fri, 01 Dec 2017 14:22:24 +0100},
+  biburl    = {http://dblp.org/rec/bib/journals/corr/abs-1711-04574},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+@inproceedings{evgeniou2004regularized,
   title={Regularized multi--task learning},
   author={Evgeniou, Theodoros and Pontil, Massimiliano},
   booktitle={Proc. of the tenth ACM SIGKDD international conference on Knowledge discovery and data mining},
@@ -1202,7 +1461,8 @@
   timestamp = {Sat, 11 Jul 2015 19:35:08 +0200},
   biburl    = {http://dblp.uni-trier.de/rec/bib/conf/naacl/FaruquiDJDHS15},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@misc{firth1957synopsis,
+}
+@misc{firth1957synopsis,
   title={A Synopsis of Linguistic Theory 1930--55},
   author={Firth, John R},
   year={1957},
@@ -1224,7 +1484,8 @@
   timestamp = {Thu, 19 Dec 2013 10:43:21 +0100},
   biburl    = {http://dblp.uni-trier.de/rec/bib/journals/ml/FrancaZG14},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@inproceedings{galarraga2013amie,
+}
+@inproceedings{galarraga2013amie,
   title={AMIE: association rule mining under incomplete evidence in ontological knowledge bases},
   author={Gal{\'a}rraga, Luis Antonio and Teflioudi, Christina and Hose, Katja and Suchanek, Fabian},
   booktitle={Proceedings of the 22nd international conference on World Wide Web},
@@ -1348,6 +1609,12 @@
   biburl    = {http://dblp.uni-trier.de/rec/bib/conf/emnlp/GardnerTKM14},
   bibsource = {dblp computer science bibliography, http://dblp.org}
 }
+@unpublished{gardner2017allennlp
+	author = "Matt Gardner and Joel Grus and Mark Neumann and Oyvind Tafjord and Pradeep Dasigi and
+Nelson Liu and Matthew Peters and Michael Schmitz and Luke Zettlemoyer",
+	title = "AllenNLP: A Deep Semantic Natural Language Processing Platform",
+	note = "white paper",
+}
 @inproceedings{garrette2011integrating,
   author    = {Dan Garrette and
                Katrin Erk and
@@ -1371,6 +1638,38 @@
   year={2014},
   publisher={Springer}
 }
+@article{gelder1987efficient,
+  author    = {Allen Van Gelder},
+  title     = {Efficient Loop Detection in Prolog using the Tortoise-and-Hare Technique},
+  journal   = {J. Log. Program.},
+  volume    = {4},
+  number    = {1},
+  pages     = {23--31},
+  year      = {1987},
+  url       = {https://doi.org/10.1016/0743-1066(87)90020-3},
+  doi       = {10.1016/0743-1066(87)90020-3},
+  timestamp = {Sun, 28 May 2017 13:17:34 +0200},
+  biburl    = {http://dblp.org/rec/bib/journals/jlp/Gelder87},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+@article{gemici2017generative,
+  author    = {Mevlana Gemici and
+               Chia{-}Chun Hung and
+               Adam Santoro and
+               Greg Wayne and
+               Shakir Mohamed and
+               Danilo Jimenez Rezende and
+               David Amos and
+               Timothy P. Lillicrap},
+  title     = {Generative Temporal Models with Memory},
+  journal   = {CoRR},
+  volume    = {abs/1702.04649},
+  year      = {2017},
+  url       = {http://arxiv.org/abs/1702.04649},
+  timestamp = {Wed, 07 Jun 2017 14:41:47 +0200},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/GemiciHSWMRAL17},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
 @inproceedings{gemulla2011large,
   title={Large-scale matrix factorization with distributed stochastic gradient descent},
   author={Gemulla, Rainer and Nijkamp, Erik and Haas, Peter J and Sismanis, Yannis},
@@ -1384,6 +1683,21 @@
   author={Getoor, Lise},
   year={2007},
   publisher={MIT press}
+}
+@inproceedings{glorot2010understanding,
+  author    = {Xavier Glorot and
+               Yoshua Bengio},
+  title     = {Understanding the difficulty of training deep feedforward neural networks},
+  booktitle = {Proceedings of the Thirteenth International Conference on Artificial
+               Intelligence and Statistics, {AISTATS} 2010, Chia Laguna Resort, Sardinia,
+               Italy, May 13-15, 2010},
+  pages     = {249--256},
+  year      = {2010},
+  crossref  = {DBLP:conf/aistats/2010},
+  url       = {http://www.jmlr.org/proceedings/papers/v9/glorot10a.html},
+  timestamp = {Thu, 11 Sep 2014 07:28:56 +0200},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/journals/jmlr/GlorotB10},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
 }
 @article{godel1932intuitionistischen,
   title={Zum Intuitionistischen Aussagenkalk{\"u}l},
@@ -1430,14 +1744,16 @@
 }
 @article{goodman2016eu,
   author    = {Bryce Goodman and
-               Seth Flaxman},
+               Seth R. Flaxman},
   title     = {{EU} regulations on algorithmic decision-making and a "right to explanation"},
   journal   = {CoRR},
   volume    = {abs/1606.08813},
   year      = {2016},
   url       = {http://arxiv.org/abs/1606.08813},
-  timestamp = {Fri, 01 Jul 2016 17:39:49 +0200},
-  biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/GoodmanF16},
+  archivePrefix = {arXiv},
+  eprint    = {1606.08813},
+  timestamp = {Mon, 13 Nov 2017 18:31:59 +0100},
+  biburl    = {http://dblp.org/rec/bib/journals/corr/GoodmanF16},
   bibsource = {dblp computer science bibliography, http://dblp.org}
 }
 @article{graves2005framewise,
@@ -1455,7 +1771,8 @@
   timestamp = {Thu, 10 Nov 2005 15:02:49 +0100},
   biburl    = {http://dblp.uni-trier.de/rec/bib/journals/nn/GravesS05},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@book{graves2012supervised,
+}
+@book{graves2012supervised,
   title={Supervised sequence labelling with recurrent neural networks},
   author={Graves, Alex},
   volume={385},
@@ -1484,6 +1801,39 @@
   url       = {http://arxiv.org/abs/1410.5401},
   timestamp = {Sun, 02 Nov 2014 11:25:59 +0100},
   biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/GravesWD14},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+@article{graves2016hybrid,
+  author    = {Alex Graves and
+               Greg Wayne and
+               Malcolm Reynolds and
+               Tim Harley and
+               Ivo Danihelka and
+               Agnieszka Grabska{-}Barwinska and
+               Sergio Gomez Colmenarejo and
+               Edward Grefenstette and
+               Tiago Ramalho and
+               John Agapiou and
+               Adri{\`{a}} Puigdom{\`{e}}nech Badia and
+               Karl Moritz Hermann and
+               Yori Zwols and
+               Georg Ostrovski and
+               Adam Cain and
+               Helen King and
+               Christopher Summerfield and
+               Phil Blunsom and
+               Koray Kavukcuoglu and
+               Demis Hassabis},
+  title     = {Hybrid computing using a neural network with dynamic external memory},
+  journal   = {Nature},
+  volume    = {538},
+  number    = {7626},
+  pages     = {471--476},
+  year      = {2016},
+  url       = {https://doi.org/10.1038/nature20101},
+  doi       = {10.1038/nature20101},
+  timestamp = {Sat, 20 May 2017 00:24:51 +0200},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/journals/nature/GravesWRHDGCGRA16},
   bibsource = {dblp computer science bibliography, http://dblp.org}
 }
 @inproceedings{grefenstette2013towards,
@@ -1553,7 +1903,8 @@
   timestamp = {Sat, 14 Nov 2015 12:35:20 +0100},
   biburl    = {http://dblp.uni-trier.de/rec/bib/conf/emnlp/GuML15},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@book{gunaratana2011mindfulness,
+}
+@book{gunaratana2011mindfulness,
   title={Mindfulness in plain English},
   author={Gunaratana, Bhante and Gunaratana, Henepola},
   year={2011},
@@ -1591,6 +1942,23 @@
   year={2009},
   publisher={Springer}
 }
+@inproceedings{he2016deep,
+  author    = {Kaiming He and
+               Xiangyu Zhang and
+               Shaoqing Ren and
+               Jian Sun},
+  title     = {Deep Residual Learning for Image Recognition},
+  booktitle = {2016 {IEEE} Conference on Computer Vision and Pattern Recognition,
+               {CVPR} 2016, Las Vegas, NV, USA, June 27-30, 2016},
+  pages     = {770--778},
+  year      = {2016},
+  crossref  = {DBLP:conf/cvpr/2016},
+  url       = {https://doi.org/10.1109/CVPR.2016.90},
+  doi       = {10.1109/CVPR.2016.90},
+  timestamp = {Thu, 25 May 2017 00:41:26 +0200},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/conf/cvpr/HeZRS16},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
 @inproceedings{hermann2013role,
   author    = {Karl Moritz Hermann and
                Phil Blunsom},
@@ -1625,7 +1993,8 @@
   timestamp = {Fri, 08 Apr 2016 19:32:52 +0200},
   biburl    = {http://dblp.uni-trier.de/rec/bib/conf/nips/HermannKGEKSB15},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@article{hill2015goldilocks,
+}
+@article{hill2015goldilocks,
   title={The Goldilocks Principle: Reading Children's Books with Explicit Memory Representations},
   author={Hill, Felix and Bordes, Antoine and Chopra, Sumit and Weston, Jason},
   journal={arXiv preprint arXiv:1511.02301},
@@ -1690,7 +2059,8 @@
   timestamp = {Tue, 11 Dec 2012 17:40:42 +0100},
   biburl    = {http://dblp.uni-trier.de/rec/bib/conf/aaai/Holldobler90},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@article{holldobler1999approximating,
+}
+@article{holldobler1999approximating,
   author    = {Steffen H{\"{o}}lldobler and
                Yvonne Kalinke and
                Hans{-}Peter St{\"{o}}rr},
@@ -1724,7 +2094,8 @@
   timestamp = {Wed, 10 Dec 2014 21:34:12 +0100},
   biburl    = {http://dblp.uni-trier.de/rec/bib/conf/nips/HuLLC14},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@inproceedings{hu2016harnessing,
+}
+@inproceedings{hu2016harnessing,
   author    = {Zhiting Hu and
                Xuezhe Ma and
                Zhengzhong Liu and
@@ -1740,7 +2111,8 @@
   timestamp = {Mon, 15 Aug 2016 20:10:51 +0200},
   biburl    = {http://dblp.uni-trier.de/rec/bib/conf/acl/HuMLHX16},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@article{iyyer2014neural,
+}
+@article{iyyer2014neural,
   title={A Neural Network for Factoid Question Answering over Paragraphs},
   author={Iyyer, Mohit and Boyd-Graber, Jordan and Claudino, Leonardo and Socher, Richard and III, Hal Daum{\'e}},
   year={2014}
@@ -1763,6 +2135,21 @@
   author={Janert, Philipp K},
   year={2009},
   publisher={Manning Publications Co.}
+}
+@article{jang2016categorical,
+  author    = {Eric Jang and
+               Shixiang Gu and
+               Ben Poole},
+  title     = {Categorical Reparameterization with Gumbel-Softmax},
+  journal   = {CoRR},
+  volume    = {abs/1611.01144},
+  year      = {2016},
+  url       = {http://arxiv.org/abs/1611.01144},
+  archivePrefix = {arXiv},
+  eprint    = {1611.01144},
+  timestamp = {Wed, 07 Jun 2017 14:42:36 +0200},
+  biburl    = {http://dblp.org/rec/bib/journals/corr/JangGP16},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
 }
 @inproceedings{jenatton2012latent,
   title={A latent factor model for highly multi-relational data},
@@ -1787,7 +2174,8 @@
   timestamp = {Thu, 06 Oct 2016 08:48:34 +0200},
   biburl    = {http://dblp.uni-trier.de/rec/bib/conf/semeval/JimenezDBG14},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@inproceedings{joulin2015inferring,
+}
+@inproceedings{joulin2015inferring,
   author    = {Armand Joulin and
                Tomas Mikolov},
   title     = {Inferring Algorithmic Patterns with Stack-Augmented Recurrent Nets},
@@ -1801,7 +2189,8 @@
   timestamp = {Fri, 08 Apr 2016 19:32:53 +0200},
   biburl    = {http://dblp.uni-trier.de/rec/bib/conf/nips/JoulinM15},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@article{kaiser2015neural,
+}
+@article{kaiser2015neural,
   title={Neural GPUs Learn Algorithms},
   author={Kaiser, \Lucas and Sutskever, Ilya},
   journal={arXiv preprint arXiv:1511.08228},
@@ -1812,6 +2201,19 @@
   author={Kalchbrenner, Nal and Grefenstette, Edward and Blunsom, Phil},
   journal={arXiv preprint arXiv:1404.2188},
   year={2014}
+}
+@inproceedings{kaliszyk2017holstep,
+  author    = {Cezary Kaliszyk and
+               Fran{\c{c}}ois Chollet and
+               Christian Szegedy},
+  title     = {HolStep: {A} Machine Learning Dataset for Higher-order Logic Theorem
+               Proving},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2017},
+  url       = {http://arxiv.org/abs/1703.00426},
+  timestamp = {Mon, 03 Apr 2017 12:41:34 +0200},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/KaliszykCS17},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
 }
 @article{karpathy2014deep,
   title={Deep visual-semantic alignments for generating image descriptions},
@@ -1831,18 +2233,37 @@
   pages={1--4},
   year={2012}
 }
-@article{kingma2014adam,
+@inproceedings{kingma2014adam,
   author    = {Diederik P. Kingma and
                Jimmy Ba},
   title     = {Adam: {A} Method for Stochastic Optimization},
-  journal   = {CoRR},
-  volume    = {abs/1412.6980},
-  year      = {2014},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2015},
   url       = {http://arxiv.org/abs/1412.6980},
   timestamp = {Thu, 01 Jan 2015 19:51:08 +0100},
   biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/KingmaB14},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@inproceedings{kocsis2006bandit,
+}
+@article{kocisky2017narrativeqa,
+  author    = {Tom{\'{a}}s Kocisk{\'{y}} and
+               Jonathan Schwarz and
+               Phil Blunsom and
+               Chris Dyer and
+               Karl Moritz Hermann and
+               G{\'{a}}bor Melis and
+               Edward Grefenstette},
+  title     = {The NarrativeQA Reading Comprehension Challenge},
+  journal   = {CoRR},
+  volume    = {abs/1712.07040},
+  year      = {2017},
+  url       = {http://arxiv.org/abs/1712.07040},
+  archivePrefix = {arXiv},
+  eprint    = {1712.07040},
+  timestamp = {Thu, 04 Jan 2018 12:38:35 +0100},
+  biburl    = {http://dblp.org/rec/bib/journals/corr/abs-1712-07040},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+@inproceedings{kocsis2006bandit,
   author    = {Levente Kocsis and
                Csaba Szepesv{\'{a}}ri},
   title     = {Bandit Based Monte-Carlo Planning},
@@ -1857,15 +2278,35 @@
   biburl    = {http://dblp.uni-trier.de/rec/bib/conf/ecml/KocsisS06},
   bibsource = {dblp computer science bibliography, http://dblp.org}
 }
+@inproceedings{kok2007statistical,
+  author    = {Stanley Kok and
+               Pedro M. Domingos},
+  title     = {Statistical predicate invention},
+  booktitle = {Machine Learning, Proceedings of the Twenty-Fourth International Conference
+               {(ICML} 2007), Corvallis, Oregon, USA, June 20-24, 2007},
+  pages     = {433--440},
+  year      = {2007},
+  crossref  = {DBLP:conf/icml/2007},
+  url       = {http://doi.acm.org/10.1145/1273496.1273551},
+  doi       = {10.1145/1273496.1273551},
+  timestamp = {Thu, 07 May 2015 20:04:43 +0200},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/conf/icml/KokD07},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
 @article{kolda2009tensor,
-  title={Tensor decompositions and applications},
-  author={Kolda, Tamara G and Bader, Brett W},
-  journal={SIAM review},
-  volume={51},
-  number={3},
-  pages={455--500},
-  year={2009},
-  publisher={SIAM}
+  author    = {Tamara G. Kolda and
+               Brett W. Bader},
+  title     = {Tensor Decompositions and Applications},
+  journal   = {{SIAM} Review},
+  volume    = {51},
+  number    = {3},
+  pages     = {455--500},
+  year      = {2009},
+  url       = {https://doi.org/10.1137/07070111X},
+  doi       = {10.1137/07070111X},
+  timestamp = {Thu, 08 Jun 2017 09:02:10 +0200},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/journals/siamrev/KoldaB09},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
 }
 @article{komendantskaya2011unification,
   author    = {Ekaterina Komendantskaya},
@@ -1880,7 +2321,8 @@
   timestamp = {Fri, 04 Nov 2011 10:28:59 +0100},
   biburl    = {http://dblp.uni-trier.de/rec/bib/journals/igpl/Komendantskaya11},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@article{kowalski1971linear,
+}
+@article{kowalski1971linear,
   author    = {Robert A. Kowalski and
                Donald Kuehner},
   title     = {Linear Resolution with Selection Function},
@@ -1913,7 +2355,8 @@
   timestamp = {Mon, 20 Jul 2015 08:21:53 +0200},
   biburl    = {http://dblp.uni-trier.de/rec/bib/journals/tacl/KruszewskiPB15},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@article{kschischang2001factor,
+}
+@article{kschischang2001factor,
   title={Factor graphs and the sum-product algorithm},
   author={Kschischang, Frank R and Frey, Brendan J and Loeliger, H-A},
   journal={Information Theory, IEEE Transactions on},
@@ -1946,7 +2389,8 @@
   timestamp = {Tue, 04 Oct 2016 10:40:16 +0200},
   biburl    = {http://dblp.uni-trier.de/rec/bib/conf/semeval/LaiH14},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@article{lao2010relational,
+}
+@article{lao2010relational,
   author    = {Ni Lao and
                William W. Cohen},
   title     = {Relational retrieval using a combination of path-constrained random
@@ -2111,6 +2555,32 @@
   biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/LiuSLW16},
   bibsource = {dblp computer science bibliography, http://dblp.org}
 }
+@book{lloyd1987foundations,
+  author    = {John W. Lloyd},
+  title     = {Foundations of Logic Programming, 2nd Edition},
+  publisher = {Springer},
+  year      = {1987},
+  isbn      = {3-540-18199-7},
+  timestamp = {Thu, 03 Jan 2002 11:51:48 +0100},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/books/sp/Lloyd87},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+@inproceedings{loos2017deep,
+  author    = {Sarah M. Loos and
+               Geoffrey Irving and
+               Christian Szegedy and
+               Cezary Kaliszyk},
+  title     = {Deep Network Guided Proof Search},
+  booktitle = {LPAR-21, 21st International Conference on Logic for Programming, Artificial
+               Intelligence and Reasoning, Maun, Botswana, May 7-12, 2017},
+  pages     = {85--105},
+  year      = {2017},
+  crossref  = {DBLP:conf/lpar/2017},
+  url       = {http://www.easychair.org/publications/paper/340345},
+  timestamp = {Thu, 23 Nov 2017 16:56:11 +0100},
+  biburl    = {http://dblp.org/rec/bib/conf/lpar/LoosISK17},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
 @incollection{loreto2016dynamics,
   title={Dynamics on Expanding Spaces: Modeling the Emergence of Novelties},
   author={Loreto, Vittorio and Servedio, Vito DP and Strogatz, Steven H and Tria, Francesca},
@@ -2173,7 +2643,8 @@
   timestamp = {Mon, 04 Mar 2013 20:57:25 +0100},
   biburl    = {http://dblp.uni-trier.de/rec/bib/conf/acl/MannM08},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@book{manning2008introduction,
+}
+@book{manning2008introduction,
   author    = {Christopher D. Manning and
                Prabhakar Raghavan and
                Hinrich Sch{\"{u}}tze},
@@ -2204,7 +2675,22 @@
   timestamp = {Tue, 04 Oct 2016 10:40:16 +0200},
   biburl    = {http://dblp.uni-trier.de/rec/bib/conf/semeval/MarelliBBBMZ14},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@article{martins2012alternating,
+}
+@inproceedings{martens2012estimating,
+  author    = {James Martens and
+               Ilya Sutskever and
+               Kevin Swersky},
+  title     = {Estimating the Hessian by Back-propagating Curvature},
+  booktitle = {Proceedings of the 29th International Conference on Machine Learning,
+               {ICML} 2012, Edinburgh, Scotland, UK, June 26 - July 1, 2012},
+  year      = {2012},
+  crossref  = {DBLP:conf/icml/2012},
+  url       = {http://icml.cc/2012/papers/866.pdf},
+  timestamp = {Wed, 29 Mar 2017 16:45:25 +0200},
+  biburl    = {http://dblp.org/rec/bib/conf/icml/MartensSS12},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+@article{martins2012alternating,
   title={Alternating directions dual decomposition},
   author={Martins, Andre FT and Figueiredo, Mario AT and Aguiar, Pedro MQ and Smith, Noah A and Xing, Eric P},
   journal={arXiv preprint arXiv:1212.6550},
@@ -2240,7 +2726,8 @@
   timestamp = {Thu, 07 May 2015 20:02:01 +0200},
   biburl    = {http://dblp.uni-trier.de/rec/bib/conf/nips/MikolovSCCD13},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@article{mikolov2013efficient,
+}
+@article{mikolov2013efficient,
   title={Efficient Estimation of Word Representations in Vector Space},
   author={Mikolov, Tomas and Chen, Kai and Corrado, Greg and Dean, Jeffrey},
   journal={arXiv preprint arXiv:1301.3781},
@@ -2320,7 +2807,60 @@
   timestamp = {Wed, 10 Dec 2014 21:34:12 +0100},
   biburl    = {http://dblp.uni-trier.de/rec/bib/conf/nips/MnihHGK14},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@article{moczulski2015acdc,
+}
+@article{mnih2015human,
+  author    = {Volodymyr Mnih and
+               Koray Kavukcuoglu and
+               David Silver and
+               Andrei A. Rusu and
+               Joel Veness and
+               Marc G. Bellemare and
+               Alex Graves and
+               Martin A. Riedmiller and
+               Andreas Fidjeland and
+               Georg Ostrovski and
+               Stig Petersen and
+               Charles Beattie and
+               Amir Sadik and
+               Ioannis Antonoglou and
+               Helen King and
+               Dharshan Kumaran and
+               Daan Wierstra and
+               Shane Legg and
+               Demis Hassabis},
+  title     = {Human-level control through deep reinforcement learning},
+  journal   = {Nature},
+  volume    = {518},
+  number    = {7540},
+  pages     = {529--533},
+  year      = {2015},
+  url       = {https://doi.org/10.1038/nature14236},
+  doi       = {10.1038/nature14236},
+  timestamp = {Sat, 20 May 2017 00:24:51 +0200},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/journals/nature/MnihKSRVBGRFOPB15},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+@inproceedings{mnih2016asynchronous,
+  author    = {Volodymyr Mnih and
+               Adri{\`{a}} Puigdom{\`{e}}nech Badia and
+               Mehdi Mirza and
+               Alex Graves and
+               Timothy P. Lillicrap and
+               Tim Harley and
+               David Silver and
+               Koray Kavukcuoglu},
+  title     = {Asynchronous Methods for Deep Reinforcement Learning},
+  booktitle = {Proceedings of the 33nd International Conference on Machine Learning,
+               {ICML} 2016, New York City, NY, USA, June 19-24, 2016},
+  pages     = {1928--1937},
+  year      = {2016},
+  crossref  = {DBLP:conf/icml/2016},
+  url       = {http://jmlr.org/proceedings/papers/v48/mniha16.html},
+  timestamp = {Tue, 12 Jul 2016 21:51:16 +0200},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/conf/icml/MnihBMGLHSK16},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+@article{moczulski2015acdc,
   title={ACDC: A Structured Efficient Linear Layer},
   author={Moczulski, Marcin and Denil, Misha and Appleyard, Jeremy and de Freitas, Nando},
   journal={arXiv preprint arXiv:1511.05946},
@@ -2448,6 +2988,20 @@
   year={2012},
   publisher={MIT press}
 }
+@inproceedings{nair2010rectified,
+  author    = {Vinod Nair and
+               Geoffrey E. Hinton},
+  title     = {Rectified Linear Units Improve Restricted Boltzmann Machines},
+  booktitle = {Proceedings of the 27th International Conference on Machine Learning
+               (ICML-10), June 21-24, 2010, Haifa, Israel},
+  pages     = {807--814},
+  year      = {2010},
+  crossref  = {DBLP:conf/icml/2010},
+  url       = {http://www.icml2010.org/papers/432.pdf},
+  timestamp = {Fri, 12 Jun 2015 19:15:11 +0200},
+  biburl    = {http://dblp.org/rec/bib/conf/icml/NairH10},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
 @article{neelakantan2015adding,
   title={Adding Gradient Noise Improves Learning for Very Deep Networks},
   author={Neelakantan, Arvind and Vilnis, Luke and Le, Quoc V and Sutskever, Ilya and Kaiser, Lukasz and Kurach, Karol and Martens, James},
@@ -2471,14 +3025,13 @@
   biburl    = {http://dblp.uni-trier.de/rec/bib/conf/acl/NeelakantanRM15},
   bibsource = {dblp computer science bibliography, http://dblp.org}
 }
-@article{neelakantan2015neural,
+@inproceedings{neelakantan2015neural,
   author    = {Arvind Neelakantan and
                Quoc V. Le and
                Ilya Sutskever},
   title     = {Neural Programmer: Inducing Latent Programs with Gradient Descent},
-  journal   = {CoRR},
-  volume    = {abs/1511.04834},
-  year      = {2015},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2016},
   url       = {http://arxiv.org/abs/1511.04834},
   timestamp = {Tue, 01 Dec 2015 19:22:34 +0100},
   biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/NeelakantanLS15},
@@ -2540,17 +3093,19 @@
   year={2013},
   school={lmu}
 }
-@article{nickel2015holographic,
+@inproceedings{nickel2015holographic,
   author    = {Maximilian Nickel and
                Lorenzo Rosasco and
                Tomaso A. Poggio},
   title     = {Holographic Embeddings of Knowledge Graphs},
-  journal   = {CoRR},
-  volume    = {abs/1510.04935},
-  year      = {2015},
-  url       = {http://arxiv.org/abs/1510.04935},
-  timestamp = {Sun, 01 Nov 2015 17:30:45 +0100},
-  biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/NickelRP15},
+  booktitle = {Proceedings of the Thirtieth {AAAI} Conference on Artificial Intelligence,
+               February 12-17, 2016, Phoenix, Arizona, {USA.}},
+  pages     = {1955--1961},
+  year      = {2016},
+  crossref  = {DBLP:conf/aaai/2016},
+  url       = {http://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/view/12484},
+  timestamp = {Wed, 05 Apr 2017 12:53:50 +0200},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/conf/aaai/NickelRP16},
   bibsource = {dblp computer science bibliography, http://dblp.org}
 }
 @article{nickel2016review,
@@ -2576,6 +3131,17 @@
   journal={arXiv preprint arXiv:1405.0501},
   year={2014}
 }
+@book{nilsson1990logic,
+  author    = {Ulf Nilsson and
+               Jan Maluszynski},
+  title     = {Logic, programming and Prolog},
+  publisher = {Wiley},
+  year      = {1990},
+  isbn      = {978-0-471-92625-2},
+  timestamp = {Tue, 03 May 2011 16:29:33 +0200},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/books/daglib/0067951},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
 @article{nocedal2006numerical,
   title={Numerical Optimization},
   author={Nocedal, Jorge and Wright, Stephen J},
@@ -2592,6 +3158,12 @@
   year      = {2013},
   ee        = {http://arxiv.org/abs/1304.4379},
   bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+@article{oh2017value,
+  title={Value Prediction Network},
+  author={Oh, Junhyuk and Singh, Satinder and Lee, Honglak},
+  journal={arXiv preprint arXiv:1707.03497},
+  year={2017}
 }
 @book{orr1998neural,
   title={Neural Networks: Tricks of the Trade},
@@ -2672,7 +3244,8 @@
   timestamp = {Tue, 01 Sep 2015 14:42:40 +0200},
   biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/PengLLW15},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@article{pennington2014glove,
+}
+@article{pennington2014glove,
   title={Glove: Global vectors for word representation},
   author={Pennington, Jeffrey and Socher, Richard and Manning, Christopher D},
   journal={Proc. of the Empiricial Methods in Natural Language Processing (EMNLP 2014)},
@@ -2727,13 +3300,34 @@
   timestamp = {Thu, 25 Aug 2016 11:36:25 +0200},
   biburl    = {http://dblp.uni-trier.de/rec/bib/conf/ijcai/Poole03},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@inproceedings{poon2010unsupervised,
+}
+@inproceedings{poon2010unsupervised,
   title={Unsupervised ontology induction from text},
   author={Poon, Hoifung and Domingos, Pedro},
   booktitle={Proc. of the 48th annual meeting of the Association for Computational Linguistics},
   pages={296--305},
   year={2010},
   organization={Association for Computational Linguistics}
+}
+@inproceedings{pritzel2017neural,
+  author    = {Alexander Pritzel and
+               Benigno Uria and
+               Sriram Srinivasan and
+               Adri{\`{a}} Puigdom{\`{e}}nech Badia and
+               Oriol Vinyals and
+               Demis Hassabis and
+               Daan Wierstra and
+               Charles Blundell},
+  title     = {Neural Episodic Control},
+  booktitle = {Proceedings of the 34th International Conference on Machine Learning,
+               {ICML} 2017, Sydney, NSW, Australia, 6-11 August 2017},
+  pages     = {2827--2836},
+  year      = {2017},
+  crossref  = {DBLP:conf/icml/2017},
+  url       = {http://proceedings.mlr.press/v70/pritzel17a.html},
+  timestamp = {Tue, 25 Jul 2017 17:27:57 +0200},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/conf/icml/PritzelUSBVHWB17},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
 }
 @article{quinlan1990learning,
   author    = {J. Ross Quinlan},
@@ -2748,18 +3342,31 @@
   biburl    = {http://dblp.uni-trier.de/rec/bib/journals/ml/Quinlan90},
   bibsource = {dblp computer science bibliography, http://dblp.org}
 }
+@article{raedt1997logical,
+  author    = {Luc De Raedt},
+  title     = {Logical Settings for Concept-Learning},
+  journal   = {Artif. Intell.},
+  volume    = {95},
+  number    = {1},
+  pages     = {187--201},
+  year      = {1997},
+  url       = {http://dx.doi.org/10.1016/S0004-3702(97)00041-6},
+  doi       = {10.1016/S0004-3702(97)00041-6},
+  timestamp = {Wed, 19 Nov 2003 16:01:17 +0100},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/journals/ai/Raedt97},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
 @article{raghavan2013online,
   title={Online Inference-Rule Learning from Natural-Language Extractions},
   author={Raghavan, Sindhu and Mooney, Raymond J},
   year={2013}
 }
-@article{reed2015neural,
+@inproceedings{reed2015neural,
   author    = {Scott E. Reed and
                Nando de Freitas},
   title     = {Neural Programmer-Interpreters},
-  journal   = {CoRR},
-  volume    = {abs/1511.06279},
-  year      = {2015},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2016},
   url       = {http://arxiv.org/abs/1511.06279},
   timestamp = {Fri, 08 Apr 2016 07:34:31 +0200},
   biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/ReedF15},
@@ -2836,7 +3443,8 @@
   timestamp = {Thu, 07 May 2015 20:04:46 +0200},
   biburl    = {http://dblp.uni-trier.de/rec/bib/journals/ml/RichardsonD06},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@inproceedings{riedel2013relation,
+}
+@inproceedings{riedel2013relation,
   author    = {Sebastian Riedel and
                Limin Yao and
                Andrew McCallum and
@@ -2887,7 +3495,8 @@
   timestamp = {Wed, 14 Oct 2015 09:56:24 +0200},
   biburl    = {http://dblp.uni-trier.de/rec/bib/conf/emnlp/RushCW15},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@book{russell2010artificial,
+}
+@book{russell2010artificial,
   author    = {Stuart J. Russell and
                Peter Norvig},
   title     = {Artificial Intelligence - {A} Modern Approach {(3.} internat. ed.)},
@@ -2897,7 +3506,8 @@
   timestamp = {Fri, 04 Feb 2011 09:56:38 +0100},
   biburl    = {http://dblp.uni-trier.de/rec/bib/books/daglib/0023820},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@article{salakhutdinov2009semantic,
+}
+@article{salakhutdinov2009semantic,
   title={Semantic hashing},
   author={Salakhutdinov, Ruslan and Hinton, Geoffrey},
   journal={International Journal of Approximate Reasoning},
@@ -2906,6 +3516,20 @@
   pages={969--978},
   year={2009},
   publisher={Elsevier}
+}
+@article{schaul2015prioritized,
+  author    = {Tom Schaul and
+               John Quan and
+               Ioannis Antonoglou and
+               David Silver},
+  title     = {Prioritized Experience Replay},
+  journal   = {CoRR},
+  volume    = {abs/1511.05952},
+  year      = {2015},
+  url       = {http://arxiv.org/abs/1511.05952},
+  timestamp = {Wed, 07 Jun 2017 14:42:32 +0200},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/SchaulQAS15},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
 }
 @article{schmidhuber2009ultimate,
   title={Ultimate cognition {\`a} la G{\"o}del},
@@ -2933,7 +3557,8 @@
   timestamp = {Thu, 16 Apr 2009 13:57:09 +0200},
   biburl    = {http://dblp.uni-trier.de/rec/bib/conf/emnlp/SchoenmackersEW08},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@inproceedings{schoenmackers2010learning,
+}
+@inproceedings{schoenmackers2010learning,
   author    = {Stefan Schoenmackers and
                Jesse Davis and
                Oren Etzioni and
@@ -2952,11 +3577,21 @@
   bibsource = {dblp computer science bibliography, http://dblp.org}
 }
 @inproceedings{schulman2015gradient,
-  title={Gradient estimation using stochastic computation graphs},
-  author={Schulman, John and Heess, Nicolas and Weber, Theophane and Abbeel, Pieter},
-  booktitle={NIPS},
-  pages={3528--3536},
-  year={2015}
+  author    = {John Schulman and
+               Nicolas Heess and
+               Theophane Weber and
+               Pieter Abbeel},
+  title     = {Gradient Estimation Using Stochastic Computation Graphs},
+  booktitle = {Advances in Neural Information Processing Systems 28: Annual Conference
+               on Neural Information Processing Systems 2015, December 7-12, 2015,
+               Montreal, Quebec, Canada},
+  pages     = {3528--3536},
+  year      = {2015},
+  crossref  = {DBLP:conf/nips/2015},
+  url       = {http://papers.nips.cc/paper/5899-gradient-estimation-using-stochastic-computation-graphs},
+  timestamp = {Fri, 08 Apr 2016 19:32:53 +0200},
+  biburl    = {http://dblp.org/rec/bib/conf/nips/SchulmanHWA15},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
 }
 @inproceedings{schutze1993word,
   title={Word space},
@@ -2979,6 +3614,39 @@
   biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/SeglerPW17},
   bibsource = {dblp computer science bibliography, http://dblp.org}
 }
+@inproceedings{seijen2009theoretical,
+  author    = {Harm van Seijen and
+               Hado van Hasselt and
+               Shimon Whiteson and
+               Marco A. Wiering},
+  title     = {A theoretical and empirical analysis of Expected Sarsa},
+  booktitle = {{IEEE} Symposium on Adaptive Dynamic Programming and Reinforcement
+               Learning, {ADPRL} 2009, Nashville, TN, USA, March 31 - April 1, 2009},
+  pages     = {177--184},
+  year      = {2009},
+  crossref  = {DBLP:conf/adprl/2009},
+  url       = {https://doi.org/10.1109/ADPRL.2009.4927542},
+  doi       = {10.1109/ADPRL.2009.4927542},
+  timestamp = {Fri, 26 May 2017 00:49:09 +0200},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/conf/adprl/SeijenHWW09},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+@inproceedings{serafini2016logic,
+  author    = {Luciano Serafini and
+               Artur S. d'Avila Garcez},
+  title     = {Logic Tensor Networks: Deep Learning and Logical Reasoning from Data
+               and Knowledge},
+  booktitle = {Proceedings of the 11th International Workshop on Neural-Symbolic
+               Learning and Reasoning (NeSy'16) co-located with the Joint Multi-Conference
+               on Human-Level Artificial Intelligence {(HLAI} 2016), New York City,
+               NY, USA, July 16-17, 2016.},
+  year      = {2016},
+  crossref  = {DBLP:conf/nesy/2016},
+  url       = {http://ceur-ws.org/Vol-1768/NESY16_paper3.pdf},
+  timestamp = {Tue, 10 Jan 2017 19:07:49 +0100},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/conf/nesy/SerafiniG16},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
 @inproceedings{sharmanska2013learning,
   title={Learning to Rank Using Privileged Information},
   author={Sharmanska, Viktoriia and Quadrianto, Novi and Lampert, Christoph H},
@@ -2986,6 +3654,25 @@
   pages={825--832},
   year={2013},
   organization={IEEE}
+}
+@inproceedings{shastri1992neurally,
+  title={Neurally motivated constraints on the working memory capacity of a production system for parallel processing: Implications of a connectionist model based on temporal synchrony},
+  author={Shastri, Lokendra},
+  booktitle={Proceedings of the Fourteenth Annual Conference of the Cognitive Science Society: July 29 to August 1, 1992, Cognitive Science Program, Indiana University, Bloomington},
+  volume={14},
+  pages={159},
+  year={1992},
+  organization={Psychology Press}
+}
+@article{shavlik1989approach,
+  title={An approach to combining explanation-based and neural learning algorithms},
+  author={Shavlik, Jude W and Towell, Geoffrey G},
+  journal={Connection Science},
+  volume={1},
+  number={3},
+  pages={231--253},
+  year={1989},
+  publisher={Taylor \& Francis}
 }
 @article{shavlik1991symbolic,
   title={Symbolic and neural learning algorithms: An experimental comparison},
@@ -2996,6 +3683,39 @@
   pages={111--143},
   year={1991},
   publisher={Springer}
+}
+@inproceedings{shen2016reasonet,
+  author    = {Yelong Shen and
+               Po{-}Sen Huang and
+               Jianfeng Gao and
+               Weizhu Chen},
+  title     = {ReasoNet: Learning to Stop Reading in Machine Comprehension},
+  booktitle = {Proceedings of the Workshop on Cognitive Computation: Integrating
+               neural and symbolic approaches 2016 co-located with the 30th Annual
+               Conference on Neural Information Processing Systems {(NIPS} 2016),
+               Barcelona, Spain, December 9, 2016.},
+  year      = {2016},
+  crossref  = {DBLP:conf/nips/2016coco},
+  url       = {http://ceur-ws.org/Vol-1773/CoCoNIPS_2016_paper2.pdf},
+  timestamp = {Wed, 28 Dec 2016 15:22:21 +0100},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/conf/nips/ShenHGC16},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+@article{silver2012temporal,
+  author    = {David Silver and
+               Richard S. Sutton and
+               Martin M{\"{u}}ller},
+  title     = {Temporal-difference search in computer Go},
+  journal   = {Machine Learning},
+  volume    = {87},
+  number    = {2},
+  pages     = {183--219},
+  year      = {2012},
+  url       = {https://doi.org/10.1007/s10994-012-5280-0},
+  doi       = {10.1007/s10994-012-5280-0},
+  timestamp = {Sun, 28 May 2017 13:18:24 +0200},
+  biburl    = {http://dblp.org/rec/bib/journals/ml/SilverSM12},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
 }
 @article{silver2016mastering,
   author    = {David Silver and
@@ -3030,6 +3750,65 @@
   biburl    = {http://dblp.uni-trier.de/rec/bib/journals/nature/SilverHMGSDSAPL16},
   bibsource = {dblp computer science bibliography, http://dblp.org}
 }
+@article{silver2017mastering,
+  title = {Mastering the game of {Go} without human knowledge},
+  volume = {550},
+  url = {http://dx.doi.org/10.1038/nature24270},
+  journal = {Nature},
+  author = {Silver, David and Schrittwieser, Julian and Simonyan, Karen and Antonoglou, Ioannis and Huang, Aja and Guez, Arthur and Hubert, Thomas and Baker, Lucas and Lai, Matthew and Bolton, Adrian and Chen, Yutian and Lillicrap, Timothy and Hui, Fan and Sifre, Laurent and van den Driessche, George and Graepel, Thore and Hassabis, Demis},
+  month = oct,
+  year = {2017},
+  pages = {354}
+}
+@article{silver2017mastering2,
+  author    = {David Silver and
+               Thomas Hubert and
+               Julian Schrittwieser and
+               Ioannis Antonoglou and
+               Matthew Lai and
+               Arthur Guez and
+               Marc Lanctot and
+               Laurent Sifre and
+               Dharshan Kumaran and
+               Thore Graepel and
+               Timothy P. Lillicrap and
+               Karen Simonyan and
+               Demis Hassabis},
+  title     = {Mastering Chess and Shogi by Self-Play with a General Reinforcement
+               Learning Algorithm},
+  journal   = {CoRR},
+  volume    = {abs/1712.01815},
+  year      = {2017},
+  url       = {http://arxiv.org/abs/1712.01815},
+  archivePrefix = {arXiv},
+  eprint    = {1712.01815},
+  timestamp = {Wed, 03 Jan 2018 12:33:17 +0100},
+  biburl    = {http://dblp.org/rec/bib/journals/corr/abs-1712-01815},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+@inproceedings{silver2017predictron,
+  author    = {David Silver and
+               Hado van Hasselt and
+               Matteo Hessel and
+               Tom Schaul and
+               Arthur Guez and
+               Tim Harley and
+               Gabriel Dulac{-}Arnold and
+               David P. Reichert and
+               Neil Rabinowitz and
+               Andr{\'{e}} Barreto and
+               Thomas Degris},
+  title     = {The Predictron: End-To-End Learning and Planning},
+  booktitle = {Proceedings of the 34th International Conference on Machine Learning,
+               {ICML} 2017, Sydney, NSW, Australia, 6-11 August 2017},
+  pages     = {3191--3199},
+  year      = {2017},
+  crossref  = {DBLP:conf/icml/2017},
+  url       = {http://proceedings.mlr.press/v70/silver17a.html},
+  timestamp = {Wed, 16 Aug 2017 11:08:55 +0200},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/conf/icml/SilverHHSGHDRRB17},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
 @inproceedings{singh2010minimally,
   author    = {Sameer Singh and
                Dustin Hillard and
@@ -3045,7 +3824,8 @@
   timestamp = {Wed, 27 Jul 2016 16:38:54 +0200},
   biburl    = {http://dblp.uni-trier.de/rec/bib/conf/naacl/SinghHL10},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@misc{skiena2008algorithm,
+}
+@misc{skiena2008algorithm,
   title={The Algorithm Design Manual. 2008},
   author={Skiena, Steven S},
   publisher={Springer, London},
@@ -3126,7 +3906,8 @@
   timestamp = {Mon, 30 May 2016 16:28:37 +0200},
   biburl    = {http://dblp.uni-trier.de/rec/bib/conf/nips/SourekAZK15},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@article{speriosu2013text,
+}
+@article{speriosu2013text,
   title={Text-Driven Toponym Resolution using Indirect Supervision},
   author={Speriosu, Michael and Baldridge, Jason},
   year={2013}
@@ -3137,6 +3918,20 @@
   booktitle={Advances In Neural Information Processing Systems},
   pages={1321--1328},
   year={2004}
+}
+@article{stickel1984prolog,
+  author    = {Mark E. Stickel},
+  title     = {A Prolog Technology Theorem Prover},
+  journal   = {New Generation Comput.},
+  volume    = {2},
+  number    = {4},
+  pages     = {371--383},
+  year      = {1984},
+  url       = {https://doi.org/10.1007/BF03037328},
+  doi       = {10.1007/BF03037328},
+  timestamp = {Sun, 28 May 2017 13:20:53 +0200},
+  biburl    = {http://dblp.org/rec/bib/journals/ngc/Stickel84},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
 }
 @inproceedings{suchanek2007yago,
   title={YAGO: A Core of Semantic Knowledge Unifying WordNet and Wikipedia},
@@ -3200,6 +3995,44 @@
   biburl    = {http://dblp.uni-trier.de/rec/bib/conf/nips/SutskeverVL14},
   bibsource = {dblp computer science bibliography, http://dblp.org}
 }
+@inproceedings{sutton1990integrated,
+  author    = {Richard S. Sutton},
+  title     = {Integrated Architectures for Learning, Planning, and Reacting Based
+               on Approximating Dynamic Programming},
+  booktitle = {Machine Learning, Proceedings of the Seventh International Conference
+               on Machine Learning, Austin, Texas, USA, June 21-23, 1990},
+  pages     = {216--224},
+  year      = {1990},
+  crossref  = {DBLP:conf/icml/1990},
+  timestamp = {Fri, 23 Dec 2011 14:54:21 +0100},
+  biburl    = {http://dblp.org/rec/bib/conf/icml/Sutton90},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+@inproceedings{tamar2016value,
+  author    = {Aviv Tamar and
+               Sergey Levine and
+               Pieter Abbeel and
+               Yi Wu and
+               Garrett Thomas},
+  title     = {Value Iteration Networks},
+  booktitle = {Advances in Neural Information Processing Systems 29: Annual Conference
+               on Neural Information Processing Systems 2016, December 5-10, 2016,
+               Barcelona, Spain},
+  pages     = {2146--2154},
+  year      = {2016},
+  crossref  = {DBLP:conf/nips/2016},
+  url       = {http://papers.nips.cc/paper/6046-value-iteration-networks},
+  timestamp = {Fri, 03 Mar 2017 14:59:41 +0100},
+  biburl    = {http://dblp.org/rec/bib/conf/nips/TamarLAWT16},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+@misc{telegraph2017alphagozero,
+  author={{The Telegraph}},
+  title = {Entire human chess knowledge learned and surpassed by DeepMind's AlphaZero in four hours},
+  howpublished = {\url{http://www.telegraph.co.uk/science/2017/12/06/entire-human-chess-knowledge-learned-surpassed-deepminds-alphazero/}},
+  year = {2017},
+  note = {Accessed: 2018-10-07}
+}
 @article{teschl2004topics,
   title={Topics in Real and Functional analysis},
   author={Teschl, Gerald},
@@ -3211,6 +4044,15 @@
   author={Thomas, Philippe and Rockt{\"a}schel, Tim and Mayer, Yvonne and Leser, Ulf},
   howpublished = {\url{http://rockt.github.io/SETH/}},
   year = {2014}
+}
+@article{tieleman2012lecture,
+  title={Lecture 6.5-rmsprop: Divide the gradient by a running average of its recent magnitude},
+  author={Tieleman, Tijmen and Hinton, Geoffrey},
+  journal={COURSERA: Neural networks for machine learning},
+  volume={4},
+  number={2},
+  pages={26--31},
+  year={2012}
 }
 @article{todeschini2013probabilistic,
   title={Probabilistic Low-Rank Matrix Completion with Adaptive Spectral Regularization Algorithms},
@@ -3288,6 +4130,12 @@
   biburl    = {http://dblp.uni-trier.de/rec/bib/conf/icml/TrouillonWRGB16},
   bibsource = {dblp computer science bibliography, http://dblp.org}
 }
+@article{tsividis2017human,
+  title={Human learning in Atari},
+  author={Tsividis, Pedro A and Pouncy, Thomas and Xu, Jacqueline L and Tenenbaum, Joshua B and Gershman, Samuel J},
+  year={2017},
+  publisher={Association for the Advancement of Artificial Intelligence}
+}
 @article{tucker1966some,
   title={Some mathematical notes on three-mode factor analysis},
   author={Tucker, Ledyard R},
@@ -3338,20 +4186,35 @@
   pages={1142--1151},
   year={2013}
 }
-@article{vendrov2016order,
+@inproceedings{van2016deep,
+  author    = {Hado van Hasselt and
+               Arthur Guez and
+               David Silver},
+  title     = {Deep Reinforcement Learning with Double Q-Learning},
+  booktitle = {Proceedings of the Thirtieth {AAAI} Conference on Artificial Intelligence,
+               February 12-17, 2016, Phoenix, Arizona, {USA.}},
+  pages     = {2094--2100},
+  year      = {2016},
+  crossref  = {DBLP:conf/aaai/2016},
+  url       = {http://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/view/12389},
+  timestamp = {Wed, 05 Apr 2017 12:53:50 +0200},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/conf/aaai/HasseltGS16},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+@inproceedings{vendrov2016order,
   author    = {Ivan Vendrov and
                Ryan Kiros and
                Sanja Fidler and
                Raquel Urtasun},
   title     = {Order-Embeddings of Images and Language},
-  journal   = {CoRR},
-  volume    = {abs/1511.06361},
-  year      = {2015},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2016},
   url       = {http://arxiv.org/abs/1511.06361},
   timestamp = {Tue, 01 Dec 2015 19:22:34 +0100},
   biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/VendrovKFU15},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@inproceedings{verga2015multilingual,
+}
+@inproceedings{verga2015multilingual,
   author    = {Patrick Verga and
                David Belanger and
                Emma Strubell and
@@ -3368,7 +4231,8 @@
   timestamp = {Tue, 13 Sep 2016 20:32:15 +0200},
   biburl    = {http://dblp.uni-trier.de/rec/bib/conf/naacl/VergaBSRM16},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@article{verga2016generalizing,
+}
+@article{verga2016generalizing,
   author    = {Patrick Verga and
                Arvind Neelakantan and
                Andrew McCallum},
@@ -3416,7 +4280,8 @@
   timestamp = {Fri, 08 Apr 2016 19:32:53 +0200},
   biburl    = {http://dblp.uni-trier.de/rec/bib/conf/nips/VinyalsFJ15},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@incollection{vladymyrov2013locally,
+}
+@incollection{vladymyrov2013locally,
   title={Locally Linear Landmarks for Large-Scale Manifold Learning},
   author={Vladymyrov, Max and Carreira-Perpin{\'a}n, Miguel {\'A}},
   booktitle={Machine Learning and Knowledge Discovery in Databases},
@@ -3491,7 +4356,8 @@
   timestamp = {Fri, 07 Nov 2014 12:38:01 +0100},
   biburl    = {http://dblp.uni-trier.de/rec/bib/conf/cikm/WangMC14},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@inproceedings{wang2015joint,
+}
+@inproceedings{wang2015joint,
   author    = {William Yang Wang and
                William W. Cohen},
   title     = {Joint Information Extraction and Reasoning: {A} Scalable Statistical
@@ -3523,7 +4389,26 @@
   timestamp = {Mon, 30 Jan 2017 12:13:12 +0100},
   biburl    = {http://dblp.uni-trier.de/rec/bib/conf/ijcai/WangWG15},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@inproceedings{wang2016learning,
+}
+@inproceedings{wang2016dueling,
+  author    = {Ziyu Wang and
+               Tom Schaul and
+               Matteo Hessel and
+               Hado van Hasselt and
+               Marc Lanctot and
+               Nando de Freitas},
+  title     = {Dueling Network Architectures for Deep Reinforcement Learning},
+  booktitle = {Proceedings of the 33nd International Conference on Machine Learning,
+               {ICML} 2016, New York City, NY, USA, June 19-24, 2016},
+  pages     = {1995--2003},
+  year      = {2016},
+  crossref  = {DBLP:conf/icml/2016},
+  url       = {http://jmlr.org/proceedings/papers/v48/wangf16.html},
+  timestamp = {Tue, 12 Jul 2016 21:51:16 +0200},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/conf/icml/WangSHHLF16},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+@inproceedings{wang2016learning,
   author    = {William Yang Wang and
                William W. Cohen},
   title     = {Learning First-Order Logic Embeddings via Matrix Factorization},
@@ -3537,7 +4422,8 @@
   timestamp = {Fri, 15 Jul 2016 15:58:28 +0200},
   biburl    = {http://dblp.uni-trier.de/rec/bib/conf/ijcai/WangC16},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@article{wang2017bilateral,
+}
+@article{wang2017bilateral,
   author    = {Zhiguo Wang and
                Wael Hamza and
                Radu Florian},
@@ -3555,6 +4441,44 @@
   author={Wang, Mengya and Zhuo, Hankui and Zhu, Huiling},
   journal={arXiv preprint arXiv:1702.07543},
   year={2017}
+}
+@article{watkins1992q,
+  author    = {Christopher J. C. H. Watkins and
+               Peter Dayan},
+  title     = {Q-Learning},
+  journal   = {Machine Learning},
+  volume    = {8},
+  pages     = {279--292},
+  year      = {1992},
+  url       = {https://doi.org/10.1007/BF00992698},
+  doi       = {10.1007/BF00992698},
+  timestamp = {Sun, 28 May 2017 13:18:23 +0200},
+  biburl    = {http://dblp.org/rec/bib/journals/ml/WatkinsD92},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+@article{weber2017imagination,
+  author    = {Theophane Weber and
+               S{\'{e}}bastien Racani{\`{e}}re and
+               David P. Reichert and
+               Lars Buesing and
+               Arthur Guez and
+               Danilo Jimenez Rezende and
+               Adri{\`{a}} Puigdom{\`{e}}nech Badia and
+               Oriol Vinyals and
+               Nicolas Heess and
+               Yujia Li and
+               Razvan Pascanu and
+               Peter Battaglia and
+               David Silver and
+               Daan Wierstra},
+  title     = {Imagination-Augmented Agents for Deep Reinforcement Learning},
+  journal   = {CoRR},
+  volume    = {abs/1707.06203},
+  year      = {2017},
+  url       = {http://arxiv.org/abs/1707.06203},
+  timestamp = {Sat, 05 Aug 2017 14:56:21 +0200},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/WeberRRBGRBVHLP17},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
 }
 @inproceedings{wei2015large,
   author    = {Zhuoyu Wei and
@@ -3576,7 +4500,8 @@
   timestamp = {Tue, 14 Feb 2017 20:33:22 +0100},
   biburl    = {http://dblp.uni-trier.de/rec/bib/conf/cikm/Wei0LQST15},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@article{weissenborn2016separating,
+}
+@article{weissenborn2016separating,
   author    = {Dirk Weissenborn},
   title     = {Separating Answers from Queries for Neural Reading Comprehension},
   journal   = {CoRR},
@@ -3585,6 +4510,34 @@
   url       = {http://arxiv.org/abs/1607.03316},
   timestamp = {Tue, 02 Aug 2016 12:59:27 +0200},
   biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/Weissenborn16a},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+@article{weissenborn2017dynamic,
+  author    = {Dirk Weissenborn and Tomas Kocisky and Chris Dyer},
+  title     = {Dynamic Integration of Background Knowledge in Neural NLU Systems},
+  journal   = {CoRR},
+  volume    = {abs/1706.02596},
+  year      = {2017},
+  url       = {http://arxiv.org/abs/1706.02596},
+  archivePrefix = {arXiv},
+  eprint    = {1706.02596},
+  timestamp = {Mon, 03 Jul 2017 13:29:02 +0200},
+  biburl    = {http://dblp.org/rec/bib/journals/corr/Weissenborn17},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+@article{welbl2017constructing,
+  author    = {Johannes Welbl and
+               Pontus Stenetorp and
+               Sebastian Riedel},
+  title     = {Constructing Datasets for Multi-hop Reading Comprehension Across Documents},
+  journal   = {CoRR},
+  volume    = {abs/1710.06481},
+  year      = {2017},
+  url       = {http://arxiv.org/abs/1710.06481},
+  archivePrefix = {arXiv},
+  eprint    = {1710.06481},
+  timestamp = {Tue, 14 Nov 2017 11:36:01 +0100},
+  biburl    = {http://dblp.org/rec/bib/journals/corr/abs-1710-06481},
   bibsource = {dblp computer science bibliography, http://dblp.org}
 }
 @article{weston2014memory,
@@ -3634,7 +4587,8 @@
   timestamp = {Sun, 12 Apr 2015 15:18:08 +0200},
   biburl    = {http://dblp.uni-trier.de/rec/bib/conf/aaai/WuSYLZZ15},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@inproceedings{xu2015show,
+}
+@inproceedings{xu2015show,
   author    = {Kelvin Xu and
                Jimmy Ba and
                Ryan Kiros and
@@ -3654,7 +4608,8 @@
   timestamp = {Wed, 29 Mar 2017 16:45:25 +0200},
   biburl    = {http://dblp.uni-trier.de/rec/bib/conf/icml/XuBKCCSZB15},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@article{yang2014embedding,
+}
+@inproceedings{yang2014embedding,
   author    = {Bishan Yang and
                Wen{-}tau Yih and
                Xiaodong He and
@@ -3662,15 +4617,26 @@
                Li Deng},
   title     = {Embedding Entities and Relations for Learning and Inference in Knowledge
                Bases},
-  journal   = {CoRR},
-  volume    = {abs/1412.6575},
-  year      = {2014},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2015},
   url       = {http://arxiv.org/abs/1412.6575},
   timestamp = {Thu, 01 Jan 2015 19:51:08 +0100},
   biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/YangYHGD14a},
   bibsource = {dblp computer science bibliography, http://dblp.org}
 }
- @unpublished{yao2014universal,
+@article{yang2017differentiable,
+  author    = {Fan Yang and
+               Zhilin Yang and
+               William W. Cohen},
+  title     = {Differentiable Learning of Logical Rules for Knowledge Base Completion},
+  journal   = {CoRR},
+  volume    = {abs/1702.08367},
+  year      = {2017},
+  url       = {http://arxiv.org/abs/1702.08367},
+  timestamp = {Wed, 01 Mar 2017 14:26:00 +0100},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/YangYC17},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+} @unpublished{yao2014universal,
 	author = "Limin Yao",
 	title = "Universal Schema for Knowledge Representation from Text and Structured Data",
 	year = 2014
@@ -3689,7 +4655,8 @@
   timestamp = {Wed, 01 Feb 2017 10:48:29 +0100},
   biburl    = {http://dblp.uni-trier.de/rec/bib/conf/naacl/YinS15},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@inproceedings{yu2015combining,
+}
+@inproceedings{yu2015combining,
   title={{Combining Word Embeddings and Feature Embeddings for Fine-grained Relation Extraction}},
   author={Yu, Mo and Intelligence, Machine and Gormley, Matthew R and Dredze, Mark},
   year={2015}
@@ -3712,7 +4679,8 @@
   timestamp = {Wed, 01 Oct 2014 15:00:04 +0200},
   biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/ZarembaSV14},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}@article{zaremba2015learning,
+}
+@article{zaremba2015learning,
   title={Learning Simple Algorithms from Examples},
   author={Zaremba, Wojciech and Mikolov, Tomas and Joulin, Armand and Fergus, Rob},
   journal={arXiv preprint arXiv:1511.07275},
